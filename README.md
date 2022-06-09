@@ -7,4 +7,4 @@ En este repositorio encuentras los recursos utilizados en los cursos que imparto
 Impartido del 11 de junio del 2022 al 30 de julio del 2022,
 los sábados por la mañana.
 6 clases de hora y media cada una.
-^[Curso control de versiones colaborativo git y github](git2022)
+^[Curso control de versiones colaborativo git y github](https://josiasvasquez.github.io/integrarte/git2022)
