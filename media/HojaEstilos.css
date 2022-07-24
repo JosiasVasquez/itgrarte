@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&subset=latin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&subset=latin&display=swap');
 html {
 	font-family: 'Roboto', sans-serif;
-	font-size:18pt;
+	font-size:14pt;
 	background-color:#fafafa;
 	color:#000;
 }
 h1, h2, h3, h4, h5, h6 {
-	font-weight:900;
+	font-weight:700;
 	text-align:center;
 	background-color:#eeeeee;
 }
@@ -71,25 +71,9 @@ list-style-type:disc;
 }
 hr {
 	border: none;
-	border-top: 0.1rem solid;
+	border-top: 0.3rem solid;
 }
-table {
-  display: block;
-  border-collapse: collapse;
-  max-width: 100%;
-  overflow-x: auto;
-  margin: 1em 0;
-  padding-bottom: 1em;
-}
-th {
-	font-size:1.625rem;
-	font-weight:700;
-}
-td, th {
-  padding: 5px 15px;
-  vertical-align: top;
-}
-.btnir {
+a[role="button"] {
 	font-weight:500;
 	font-size:1.292rem;
 	line-height:1.645rem;
@@ -100,13 +84,9 @@ td, th {
 	color:#fafafa;
 	transition: background-color .15s ease-in-out;
 }
-.btnir:hover, .btnir:focus {
+a[role="button"]:hover, a[role="button"]:focus {
 	background-color:#616161;
 }
-.btnir:active {
+a[role="button"]:active {
 background-color:#424242;
-}
-
-table, th, td {
-    border: 1px solid black;
 }
