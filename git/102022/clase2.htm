@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<link rel="stylesheet" src="../../media/HojaEstilos.css" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Segunda sesión curso control de versiones colaborativo con git y github</title>
+	<meta name="title" content="Segunda sesión curso control de versiones colaborativo con git y github">
+	<meta name="description" content="Segunda seción del curso control de versiones con git y github de fundación itgrarte, impartido por Josias Vásquez. Temas vistos, comandos utilizados, notas, explicación de la tarea; grabación de la clase incrustada y enlace de drive.">
+	<meta name="keywords" content="curso,git,github,itgrarte,Josias Vásquez">
+	<meta name="robots" content="index, follow">
+	<meta name="language" content="Spanish">
+	<meta name="author" content="Josias Vásquez">
+</head>
+<body>
+	<h1>Segunda sesión curso de control de versiones con git y github:</h1>
+	<h2>Temas vistos en la sesión:</h2>
+	<ol>
+		<li>Repaso de la sesión anterior,</li>
+		<li>Que es una clave gpg,</li>
+		<li>como crear una clave gpg,</li>
+		<li>Como configurar la firma de commits y tags con la clave gpg creada,</li>
+		<li>Que son las tags,</li>
+		<li>como asignar un tag a un commit,</li>
+	</ol>
+<h2>Comandos utilizados en clase.</h2>
+<dl>
+	<dt>gpg --full-generate-key</dt>
+	<dd>Inicia la creación de una clave gpg</dd>
+	<dt>gpg --list-secret-keys --keyid-format=long</dt>
+	<dd>Muestra información en la consola de las claves gpg existentes</dd>
+	<dt>gpg --list-secret-keys --keyid-format=long &gt miGPG.txt</dt>
+	<dd>Guarda en el archivo miGPG.txt la información de las claves gpg existentes</dd>
+	<dt>git config --global user.signingkey identificador</dt>
+	<dd>Configura la firma global con la clave gpg especificada mediante el identificador</dd>
+	<dt>git config --global commit.gpgsign true</dt>
+	<dd>Configura que siempre se firmen los commits</dd>
+	<dt>git config --global tag.gpgSign true</dt>
+	<dd>Configura que siempre se firmen los tags</dd>
+	<dt>git tag -m "descripción del tag" nombre</dt>
+	<dd>Crea un tag (etiqueta en español) con la descripción y el nombre indicado.</dd>
+</dl>
+<h2>Tarea:</h2>
+<p>Configurar su clave gpg, configurar que se firmen siempre los commits y tags.</p>
+<p>Repetir la tarea de la clase anterior con pequeñas modificaciones, detalle a continuación.</p>
+<p>Crear un repositorio con su primer nombre y primer apellido todo junto agregarle el sufijo GPG, Ejemplo: JosiasVasquezGPG</p>
+	<p>crear un archivo de texto con el nombre mi información y crear el primer commit es decir el commit raíz, asignarle el tag principio.</p>
+	<p>Dentro del archivo crear un mínimo de 4 secciones tales como información general, música favorita, películas favoritas, libros favoritos, equipos de futbol favoritos, selecciones del mundial favoritas etc. Para cada sección crear un commit distinto</p>
+	<p>Para cada sección agregar 5 elementos como hacer un top 5, al completar cada sección hacer commit y asignarle un tag que identifique la sección</p>
+	<p>Guardar el log de commits en un archivo, y regresar el repositorio  al tag principio.</p>
+<p>Al final comprimir el repositorio en un archivo zip o rar, y enviarlo al instructor</p>
+<h3>Nota sobre la tarea: 	</h3>
+<p>En el log no se muestra si los commits están firmados o no, para saberlo se debe ejecutar el siguiente comando de forma individual para cada commit</p>
+<p>git show</p>
+<h2>Grabación de la clase:</h2>
+<iframe src="https://drive.google.com/file/d/17CAktrDp6j7sbSRcsMDjkjfutYhfDyB4/preview" width="640" height="480" allow="autoplay"></iframe>
+	<p>Enlace a la grabación si lo prefieres <a href="https://drive.google.com/file/d/17CAktrDp6j7sbSRcsMDjkjfutYhfDyB4/view?usp=sharing">Grabación segunda sesión</a></p>
+	<a href="index.htm" role="button">Volber a la portada del curso</a>
+	<footer>
+		<p><small>Josias Vásquez</small></p>
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Atribución-CompartirIgual 4.0 Internacional</a>.</p>
+	</footer>
+</body>
+</html>
