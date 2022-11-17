@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<link rel="stylesheet" src="../../media/HojaEstilos.css" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tercera sesión curso control de versiones colaborativo con git y github</title>
+	<meta name="title" content="Tercera sesión curso control de versiones colaborativo con git y github">
+	<meta name="description" content="Segunda seción del curso control de versiones con git y github de fundación itgrarte, impartido por Josias Vásquez. Temas vistos, comandos utilizados, notas, explicación de la tarea; grabación de la clase incrustada y enlace de drive.">
+	<meta name="keywords" content="curso,git,github,itgrarte,Josias Vásquez">
+	<meta name="robots" content="index, follow">
+	<meta name="language" content="Spanish">
+	<meta name="author" content="Josias Vásquez">
+</head>
+<body>
+	<h1>Tercera sesión curso de control de versiones con git y github:</h1>
+	<h2>Temas vistos en la sesión:</h2>
+	<ul>
+		<li>Repaso de la sesión anterior,</li>
+		<li>Mostrar firmas gpg en el log</li>
+		<li>Limpiar archivos sin seguimiento del repositorio</li>
+		<li>Como revertir un commit</li>
+		<li>Que es el stash</li>
+		<li>Para que sirve el stash,</li>
+		<li>Cómo enviar los cambios al stash,</li>
+		<li>Cómo recuperar el stash con apply y pop.</li>
+		<li>Cómo borrar elementos del stash.</li>
+		<li>Cómo limpiar el stash.</li>
+		<li>Cómo crear ramas,</li>
+		<li>Como trabajar con ramas.</li>
+		<li>Cómo eliminar ramas.</li>
+			</ul>
+	<h2>Comandos vistos en la sesión:</h2>
+	<dl>
+		<dt>git log --show-signature</dt>
+		<dd>Muestra la firma GPG de un commit en el log.</dd>
+		<dt>git clean -f</dt>
+<dd>Elimina los archivos sin seguimiento del repositorio.</dd>
+<dt>git revert identificador</dt>
+<dd>Revierte el proyecto al commit indicado creando un nuevo commit.</dd>
+		<dt>git stash</dt>
+		<dd>Muestra los cambios pendientes de confirmar que se pueden agregar al stash</dd>
+		<dt>git stash save "Mensaje"</dt>
+		<dd>Guarda los cambios pendientes de confirmar en el stash</dd>
+		<dt>git stash show</dt>
+		<dd>Muestra las entradas que hemos guardado en el stash</dd>
+		<dt>git stash apply</dt>
+<dd>devuelve  la entrada del stash al repositorio y mantiene la entrada en el stash</dd>
+		<dt>git stash pop</dt>
+		<dd>Devuelve la entrada del stash al repositorio y la elimina del stash</dd>
+		<dt>git stash drop índice</dt>
+		<dd>Elimina la entrada indicada del stash</dd>
+		<dt>git stash clear</dt>
+		<dd>Elimina todas las entradas del stash</dd>
+		<dt>git branch</dt>
+		<dd>Muestra las ramas de un repositorio, marca con un símbolo de asterísco la ramma actual</dd>
+		<dt>git branch nombre de rama.</dt>
+		<dd>Crea una rama</dd>
+		<dt>git checkout nombreDeRama</dt>
+		<dd>Cambia a la rama indicada</dd>
+		<dt>git checkout -b nombre de rama.</dt>
+<dd>Crea una rama con el nombre indicado y cambia a ella</dd>
+<dt>git switch nombreDeRama</dt>
+<dd>Cambia a la rama indicada</dd>
+		<dt>git branch -d nombre de rama</dt>
+		<dd>Elimina la rama indicada</dd>
+	</dl>
+<h2>Tarea:</h2>
+<p>Crear un repositorio con la palabra cursos y su nombre</p>
+<p>En la rama principal crear un documento con el nombre de este curso contando algo al respecto</p>
+<p>Crear rama cursos y ListaDeDeseos</p>
+<p>En la rama cursos desglozar en un archivo los cursos que han recibido sobre tecnología y hacer commit.</p>
+<p>En la rama ListaDeDeseos desglozar los cursos que les gustaría resivir, hacer commit.</p>
+<p><strong>Intentar crear cuenta en <a href="https://github.com">GitHub</a></strong></p>
+	<h2>Grabación de la sesión:</h2>
+	<iframe src="https://drive.google.com/file/d/1joFHrTOJsI8k6DCsQC-NvkwJX5tn7WHP/preview" width="640" height="480" allow="autoplay"></iframe>
+<p>Enlace a la grabación si lo prefieres <a href="https://drive.google.com/file/d/1joFHrTOJsI8k6DCsQC-NvkwJX5tn7WHP/view?usp=sharing">Grabación tercera sesión</a></p>
+<a href="index.htm" role="button">Volver a la portada del curso</a>
+<footer>
+	<p><small>Josias Vásquez</small></p>
+	<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Atribución-CompartirIgual 4.0 Internacional</a>.</p>
+</footer>
+</body>
+</html>
