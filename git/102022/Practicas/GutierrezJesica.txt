@@ -1,0 +1,13 @@
+A). Que opinión tenemos sobre el curso de git y github.
+
+- Me parece muy util, recien estoy comenzando en el mundo de la programación y no entendia nada de lo que es git y github. 
+
+B). Que sugerimos para mejorar el curso.
+
+- Realmente no le encuentro nada negativo a como esta impartido el curso. Por lo que no puedo decir en que podria mejorar.
+
+c). Como aplicaremos los conocimientos aprendidos en este curso.
+
+- Empezare a cargar mis proyectos a la plataforma, para ver que opiniones se merecen :)
+
+d). Enlace a nuestro usuario de github: https://github.com/GutierrezJesica
