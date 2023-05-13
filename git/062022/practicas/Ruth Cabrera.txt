@@ -1,8 +1,0 @@
-## Curso de control de versiones colaborativo con git y github.
-A - Primero que nada agradecer a la Fundación y al profesor Josias por darme la oportunidad de participar en tan maravilloso curso, la verdad que aprendi muchisimas cosas y me llevo la mejor experiencia.
-
-B - En cuanto a sugerencias podriamos decir que no tengo nada que aportar, el curso estuvo bien organisado, las clases super entendibles y la explicacion del profesor excelente.
-
-C - Los conocimientos aprendidos en el curso me servirán mucho para poder aplicarlos en la carrera que estoy estudiando asi como en futuros proyectos que tengo en mente desarrollar.
-
-D - https://github.com/RuthEKF

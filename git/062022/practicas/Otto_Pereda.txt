@@ -1,9 +1,0 @@
-Nombre: Otto Pereda
-
-Opinión: Considero que ha sido un buen curso, aunque un poco corto.
-
-Sugerencia: considero que vendría bien contar con material de consulta, una guía contenga aspectos teóricos y descripciones de los procedimientos que se van realizando en las clases, eso ayuda mucho a reforzar lo visto en clase y comprender mejor las variantes de los comandos.
-
-Aplicación: estoy haciendo algunas prácticas de Python y Javascript; esto me puede ayudar mucho para retomar versiones anteriores del código cuando necesite resolver de diferente manera parte de lo ya trabajado. Por supuesto me interesa mucho para poder trabajar de manera colaborativa.
-
-Usuario en github: https://github.com/orperedas el usuario lo creé hace un tiempo y si cambio el nombre de ususrio me advierte de que puedo perder algunas cosas que no estoy muy claro a qué se refiere y preferí dejarlo como estaba. No tengo mayor cosa en mi cuenta, pero sí quiero comenzar a sumir mis ejercicios. Si creés que con lo que tengo ahora no pierdo nada al cambiar el nombre de usuario lo cambiaría a ottopereda.
