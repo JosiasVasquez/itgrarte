@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 	<link rel="stylesheet" src="../../media/HojaEstilos.css" />
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>1a sesión curso control de versiones colaborativo con git y github</title>
 </head>
+
 <body>
 	<h1>Primera sesión curso de control de versiones con git y github:</h1>
 	<h2>Temas de la sesión:</h2>
@@ -20,28 +22,48 @@
 		<li>configuración global y local de git,</li>
 		<li>Creación del primer commit.</li>
 	</ol>
-	<h2 id="introduccion" >Introducción al control de versiones.</h2>
-		<p>El control de versiones es una técnica utilizada en el desarrollo de software 			para gestionar y controlar los cambios y versiones que se realizan en el código 			fuente de 			un proyecto. Es una herramienta que ayuda 			a los desarrolladores a 			trabajar en equipo, 			manteniendo una copia segura y actualizada del código 			y						permitiendo una gestión de cambios 			en el mismo.</p>
+	<detail>
+		<summary>
+			<h2 id="introduccion">Introducción al control de versiones.</h2>
+		</summary>
+		<p>El control de versiones es una técnica utilizada en el desarrollo de software para gestionar y controlar los
+			cambios y versiones que se realizan en el código fuente de un proyecto. Es una herramienta que ayuda a los
+			desarrolladores a trabajar en equipo, manteniendo una copia segura y actualizada del código y permitiendo
+			una gestión de cambios en el mismo.</p>
 
-		<p>El control de versiones permite:</p>
+		<h3>El control de versiones permite:</h3>
+		<ul>
+			<li>- Registrar y gestionar los cambios realizados en el código fuente.</li>
+			<li>- Mantener copias actualizadas del código en diferentes etapas del desarrollo.</li>
+			<li>- Trabajar en equipo en el mismo código sin que se produzcan conflictos.</li>
+			<li>- Revertir cambios y volver a versiones anteriores si es necesario.</li>
+			<li>- Identificar quién hizo qué cambio en el código fuente.</li>
+			<li>- Permitir una colaboración más eficiente en el desarrollo de software.</li>
+		</ul>
+		<p>Existen diferentes sistemas de control de versiones, siendo los más utilizados Git, SVN y Mercurial. </p>
+	</detail>
+	<detail>
+		<summary>
+			<h2 id="consolagit">Introducción a la consola git CMD,</h2>
+		</summary>
+		<p>Git es un sistema de control de versiones muy popular para el desarrollo de software.</p>
+		<p>Permite a los desarrolladores colaborar en proyectos y realizar un seguimiento de los cambios en el código.
+		</p>
+		<p>Git se utiliza a través de la consola de comandos, y en sistemas operativos Windows, la herramienta cmd se
+			utiliza como la consola predeterminada.</p>
 
-		<p>- Registrar y gestionar los cambios realizados en el código fuente.</p>
-		<p>- Mantener copias actualizadas del código en diferentes etapas del desarrollo.</p>
-		<p>- Trabajar en equipo en el mismo código sin que se produzcan conflictos.</p>
-		<p>- Revertir cambios y volver a versiones anteriores si es necesario.</p>
-		<p>- Identificar quién hizo qué cambio en el código fuente.</p>
-		<p>- Permitir una colaboración más eficiente en el desarrollo de software.</p>
+		<p>La consola de comandos es una interfaz de usuario que utiliza comandos de texto en lugar de una interfaz
+			visual. A través de ella, se pueden realizar una gran cantidad de tareas, como mover archivos, instalar
+			software, ejecutar procesos, entre otras.</p>
 
-		<p>Existen diferentes sistemas de control de versiones, siendo los más utilizados 			Git, SVN y Mercurial. </p>
-	<h2 id="consolagit">Introducción a la consola git CMD,</h2>
-		<p>Git es un sistema de control de versiones muy popular para el desarrollo de 			software. Permite a los desarrolladores colaborar en proyectos y realizar un 			seguimiento de los cambios en el código. Git se utiliza a través de la consola de 			comandos, y en sistemas operativos Windows, la herramienta cmd se utiliza como la 			consola predeterminada.</p>
+		<p>Para utilizar Git y la consola de comandos, es necesario tener conocimientos básicos en la utilización de
+			estos. La consola se puede usar para ejecutar comandos de Git, como la clonación, creación de ramas,
+			fusiones y envío de cambios a un servidor remoto.</p>
 
-		<p>La consola de comandos es una interfaz de usuario que utiliza comandos de texto 			en lugar de una interfaz visual. A través de ella, se pueden realizar una gran 			cantidad de tareas, como mover archivos, instalar software, ejecutar procesos, 			entre otras.</p>
-
-		<p>Para utilizar Git y la consola de comandos, es necesario tener conocimientos 			básicos en la utilización de estos. La consola se puede usar para ejecutar 			comandos de Git, como la clonación, creación de ramas, fusiones y envío de cambios 			a un servidor remoto.</p>
-
-		<p>Es importante conocer la estructura básica de los comandos de Git, el 			funcionamiento de los repositorios y las características específicas del sistema 			operativo que se está utilizando. Con la práctica y la exploración, se pueden 			desarrollar habilidades avanzadas en el uso de Git y la consola de comandos.</p>
-
+		<p>Es importante conocer la estructura básica de los comandos de Git, el funcionamiento de los repositorios y
+			las características específicas del sistema operativo que se está utilizando. Con la práctica y la
+			exploración, se pueden desarrollar habilidades avanzadas en el uso de Git y la consola de comandos.</p>
+	</detail>
 	<h2>Comandos utilizados en la sesión:</h2>
 	<dl>
 		<dt>Flechas izquierda y derecha</dt>
@@ -49,7 +71,7 @@
 		<dt>Flechas arriba y abajo:</dt>
 		<dd>Navegar en el historial de comandos ejecutados.</dd>
 		<dt>Avance y retroceso de página:</dt>
-		<dd>Navegar de forma rápida en el historial de comandos ejecutados.</dd>		
+		<dd>Navegar de forma rápida en el historial de comandos ejecutados.</dd>
 		<dt>cd</dt>
 		<dd>Navegación entre carpetas</dd>
 		<dt>cd ..</dt>
@@ -81,12 +103,16 @@
 	</dl>
 	<h3>Notas:</h3>
 	<ol>
-		<li>para establecer el correo electrónico  global el comando sería:<br/>git config --global user.email "correo@ejemplo.com"</li>
+		<li>para establecer el correo electrónico global el comando sería:<br />git config --global user.email
+			"correo@ejemplo.com"</li>
 		<li>El correo debe ser el mismo que vamos a utilizar en la cuenta de github.</li>
 		<li>El nombre de usuario es con el que estarán firmados nuestros commits.</li>
-		<li>Para cambiar el usuario o correo para un repositorio específico, usamos el mismo comando sin la palabra --global</li>
-		<li>Cuando algún comando nos da error, debemos copiar el texto que explica el error, con esa información podemos pedir ayuda en el grupo o buscar la solución  en google.</li>
-		<li>Podemos copiar el texto del error con el cursor de revisión de NVDA, o más fácil con el complemento speech history para NVDA.</li>
+		<li>Para cambiar el usuario o correo para un repositorio específico, usamos el mismo comando sin la palabra
+			--global</li>
+		<li>Cuando algún comando nos da error, debemos copiar el texto que explica el error, con esa información podemos
+			pedir ayuda en el grupo o buscar la solución en google.</li>
+		<li>Podemos copiar el texto del error con el cursor de revisión de NVDA, o más fácil con el complemento speech
+			history para NVDA.</li>
 	</ol>
 	<h2>Grabación de la sesión:</h2>
 	<iframe src="https://drive.google.com/file/d/1SaFRhgGSyOeH1RLcefguUeu6JfcCJpWh/preview" width="640" height="480"
@@ -97,7 +123,11 @@
 	<a href="index.htm" role="button">Volver a la portada del curso</a>
 	<footer>
 		<p><small>Josias Vásquez</small></p>
-		<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Atribución-CompartirIgual 4.0 Internacional</a>.</p>
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia Creative Commons"
+					style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Esta
+			obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative
+				Commons Atribución-CompartirIgual 4.0 Internacional</a>.</p>
 	</footer>
 </body>
+
 </html>
