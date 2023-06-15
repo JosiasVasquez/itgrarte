@@ -64,63 +64,84 @@
 			las características específicas del sistema operativo que se está utilizando. Con la práctica y la
 			exploración, se pueden desarrollar habilidades avanzadas en el uso de Git y la consola de comandos.</p>
 	</details>
-	<h2>Comandos utilizados en la sesión:</h2>
-	<dl>
-		<dt>Flechas izquierda y derecha</dt>
-		<dd>Revisar los comandos introducidos en la consola.</dd>
-		<dt>Flechas arriba y abajo:</dt>
-		<dd>Navegar en el historial de comandos ejecutados.</dd>
-		<dt>Avance y retroceso de página:</dt>
-		<dd>Navegar de forma rápida en el historial de comandos ejecutados.</dd>
-		<dt>cd</dt>
-		<dd>Navegación entre carpetas</dd>
-		<dt>cd ..</dt>
-		<dd>Ir hacia atrás en el árbol de directorios, es decir al directorio padre.</dd>
-		<dt>ls</dt>
-		<dd>Listar los archivos y carpetas de un directorio.</dd>
-		<dt>dir</dt>
-		<dd>Listar los archivos y carpetas de un directorio.</dd>
-		<dt>mkdir</dt>
-		<dd>Crear una carpeta.</dd>
-		<dt>md</dt>
-		<dd>crear una carpeta.</dd>
-		<dt>git status</dt>
-		<dd>Conocer el estado del repositorio actual</dd>
-		<dt>git config --global user.name</dt>
-		<dd>Conocer el usuario global de git, o establecerlo poniendo el valor entre comillas.</dd>
-		<dt>git config --global user.email</dt>
-		<dd>Conocer el correo electrónico global de git, o establecerlo poniendo el valor entre comillas.</dd>
-		<dt>git add .</dt>
-		<dd>Agrega todos los archivos que han cambiado para registrarlos en el siguiente commit</dd>
-		<dt>git add --all</dt>
-		<dd>Agrega todos los archivos que han cambiado para registrarlos en el siguiente commit.</dd>
-		<dt>git add "nombreDeArchivo"</dt>
-		<dd>Agrega un archivo específico para registrarlo en el siguiente commit</dd>
-		<dt>git commit</dt>
-		<dd>Crear un commit sin descripción.</dd>
-		<dt>git commit -m "mensaje"</dt>
-		<dd>Crear un commit con un mensaje que lo describa.</dd>
-	</dl>
-	<h3>Notas:</h3>
-	<ol>
-		<li>para establecer el correo electrónico global el comando sería:<br />git config --global user.email
-			"correo@ejemplo.com"</li>
-		<li>El correo debe ser el mismo que vamos a utilizar en la cuenta de github.</li>
-		<li>El nombre de usuario es con el que estarán firmados nuestros commits.</li>
-		<li>Para cambiar el usuario o correo para un repositorio específico, usamos el mismo comando sin la palabra
-			--global</li>
-		<li>Cuando algún comando nos da error, debemos copiar el texto que explica el error, con esa información podemos
-			pedir ayuda en el grupo o buscar la solución en google.</li>
-		<li>Podemos copiar el texto del error con el cursor de revisión de NVDA, o más fácil con el complemento speech
-			history para NVDA.</li>
-	</ol>
-	<h2>Grabación de la sesión:</h2>
-	<iframe src="https://drive.google.com/file/d/1SaFRhgGSyOeH1RLcefguUeu6JfcCJpWh/preview" width="640" height="480"
-		allow="autoplay"></iframe>
-	<p>Enlace a la grabación si lo prefieres <a
-			href="https://drive.google.com/file/d/1SaFRhgGSyOeH1RLcefguUeu6JfcCJpWh/view?usp=sharing">Grabación de la
-			primera sesión.</a></p>
-	<a href="index.htm" role="button">Volver a la portada del curso</a>
+
+	<details>
+		<summary>
+			<h2>Comandos utilizados en la sesión:</h2>
+		</summary>
+
+		<dl>
+			<dt>Flechas izquierda y derecha</dt>
+			<dd>Revisar los comandos introducidos en la consola.</dd>
+			<dt>Flechas arriba y abajo:</dt>
+			<dd>Navegar en el historial de comandos ejecutados.</dd>
+			<dt>Avance y retroceso de página:</dt>
+			<dd>Navegar de forma rápida en el historial de comandos ejecutados.</dd>
+			<dt>cd</dt>
+			<dd>Navegación entre carpetas</dd>
+			<dt>cd ..</dt>
+			<dd>Ir hacia atrás en el árbol de directorios, es decir al directorio padre.</dd>
+			<dt>ls</dt>
+			<dd>Listar los archivos y carpetas de un directorio.</dd>
+			<dt>dir</dt>
+			<dd>Listar los archivos y carpetas de un directorio.</dd>
+			<dt>mkdir</dt>
+			<dd>Crear una carpeta.</dd>
+			<dt>md</dt>
+			<dd>crear una carpeta.</dd>
+			<dt>git status</dt>
+			<dd>Conocer el estado del repositorio actual</dd>
+			<dt>git config --global user.name</dt>
+			<dd>Conocer el usuario global de git, o establecerlo poniendo el valor entre comillas.</dd>
+			<dt>git config --global user.email</dt>
+			<dd>Conocer el correo electrónico global de git, o establecerlo poniendo el valor entre comillas.</dd>
+			<dt>git add .</dt>
+			<dd>Agrega todos los archivos que han cambiado para registrarlos en el siguiente commit</dd>
+			<dt>git add --all</dt>
+			<dd>Agrega todos los archivos que han cambiado para registrarlos en el siguiente commit.</dd>
+			<dt>git add "nombreDeArchivo"</dt>
+			<dd>Agrega un archivo específico para registrarlo en el siguiente commit</dd>
+			<dt>git commit</dt>
+			<dd>Crear un commit sin descripción.</dd>
+			<dt>git commit -m "mensaje"</dt>
+			<dd>Crear un commit con un mensaje que lo describa.</dd>
+		</dl>
+	</details>
+
+	<details>
+		<summary>
+			<h3>Notas:</h3>
+		</summary>
+		<ol>
+			<li>para establecer el correo electrónico global el comando sería:<br />git config --global user.email
+				"correo@ejemplo.com"</li>
+			<li>El correo debe ser el mismo que vamos a utilizar en la cuenta de github.</li>
+			<li>El nombre de usuario es con el que estarán firmados nuestros commits.</li>
+			<li>Para cambiar el usuario o correo para un repositorio específico, usamos el mismo comando sin la palabra
+				--global</li>
+			<li>Cuando algún comando nos da error, debemos copiar el texto que explica el error, con esa información
+				podemos
+				pedir ayuda en el grupo o buscar la solución en google.</li>
+			<li>Podemos copiar el texto del error con el cursor de revisión de NVDA, o más fácil con el complemento
+				speech
+				history para NVDA.</li>
+		</ol>
+	</details>
+
+	<details>
+		<summary>
+			<h2>Grabación de la sesión:</h2>
+		</summary>
+
+		<iframe src="https://drive.google.com/file/d/1SaFRhgGSyOeH1RLcefguUeu6JfcCJpWh/preview" width="640" height="480"
+			allow="autoplay"></iframe>
+		<p>Enlace a la grabación si lo prefieres <a
+				href="https://drive.google.com/file/d/1SaFRhgGSyOeH1RLcefguUeu6JfcCJpWh/view?usp=sharing">Grabación de
+				la
+				primera sesión.</a></p>
+		<a href="index.htm" role="button">Volver a la portada del curso</a>
+	</details>
+
 	<footer>
 		<p><small>Josias Vásquez</small></p>
 		<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia Creative Commons"
