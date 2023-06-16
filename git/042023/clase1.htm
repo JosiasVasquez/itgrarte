@@ -26,12 +26,12 @@
 
 			<h3>El control de versiones permite:</h3>
 			<ul>
-				<li>- Registrar y gestionar los cambios realizados en el código 				fuente.</li>
-				<li>- Mantener copias actualizadas del código en diferentes etapas 				del desarrollo.</li>
-				<li>- Trabajar en equipo en el mismo código sin que se produzcan 				conflictos.</li>
-				<li>- Revertir cambios y volver a versiones anteriores si es 				necesario.</li>
-				<li>- Identificar quién hizo qué cambio en el código fuente.</li>
-				<li>- Permitir una colaboración más eficiente en el desarrollo de 				software.</li>
+				<li> Registrar y gestionar los cambios realizados en el código 				fuente.</li>
+				<li> Mantener copias actualizadas del código en diferentes etapas 				del desarrollo.</li>
+				<li> Trabajar en equipo en el mismo código sin que se produzcan 				conflictos.</li>
+				<li> Revertir cambios y volver a versiones anteriores si es 				necesario.</li>
+				<li> Identificar quién hizo qué cambio en el código fuente.</li>
+				<li> Permitir una colaboración más eficiente en el desarrollo de 				software.</li>
 			</ul>
 			<p>Existen diferentes sistemas de control de versiones, siendo los más 				utilizados Git, SVN y Mercurial. </p>
 		</details></li>
@@ -58,7 +58,31 @@
 				exploración, se pueden desarrollar habilidades avanzadas en el uso 				de Git y la consola de comandos.</p>
 		</details></li>
 
-		<li>Navegación entre repositorios,</li>
+		<li><details><summary>
+			Navegación entre repositorios,
+		</summary>
+			Para navegar en los repositorios de Git, aquí hay algunos pasos básicos que puedes seguir:
+			<ol>
+				<li><p>Clonar un repositorio: El primer paso para navegar en un repositorio de Git es clonarlo en tu 					máquina local. Para hacer esto, utiliza el comando "git clone" seguido de la URL del repositorio. Por 					ejemplo:</p>
+				<ol>
+					<li>git clone https://github.com/nombre_usuario/nombre_repositorio.git</li>
+				</ol></li>
+				<li><p>Cambiar de directorio: Una vez que hayas clonado el repositorio, utiliza el comando "cd" para 					cambiar al directorio del repositorio:</p>
+				<ol>
+					<li>cd nombre_repositorio</li>
+				</ol></li>
+				<li><p>Ver ramas remotas: Puedes utilizar el comando "git branch -r" para ver las ramas remotas 					disponibles en el repositorio. Esto te mostrará una lista de las ramas que existen en el repositorio 					remoto.</p>
+				</li>
+				<li><p>Cambiar a una rama específica: Utiliza el comando "git checkout" seguido del nombre de la rama 					para cambiar a una rama específica. Por ejemplo:</p>
+<ol>				
+					<li>git checkout nombre_rama</li>
+				</ol></li>
+				<li><p>Ver el historial de commits: Puedes utilizar el comando 					"git log" para ver el historial de commits en la rama actual. Esto 					te mostrará información como el autor del commit, la fecha y hora, 					y el mensaje asociado.</p>
+				</li>
+				<li><p>Navegar en el historial de commits: Puedes utilizar 					comandos como "git diff" para ver las diferencias entre commits, 					"git show" para ver los detalles de un commit específico, y "git 					checkout" para cambiar entre diferentes commits. Estos comandos te 					permiten navegar y entender mejor el historial de cambios en el 					repositorio.</p>
+				</li></ol>
+			<p>Recuerda que estos son solo algunos ejemplos de comandos básicos para 				navegar en un repositorio de Git. Hay muchas más funcionalidades y 				comandos avanzados disponibles, dependiendo de tus necesidades. </p>
+		</details></li>
 		<li>Creación de repositorios</li>
 		<li>configuración global y local de git,</li>
 		<li>Creación del primer commit.</li>
