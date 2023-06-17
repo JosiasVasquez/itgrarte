@@ -15,143 +15,287 @@
 		<li>Bienvenida y presentación entre participantes, instructor y fundación Itgrarte,</li>
 		<li>Descomprimiendo Git Portable,</li>
 		<li>Conociendo la estructura de carpetas de git portable,</li>
-		<li><details>
-			<summary>
-				Introducción al control de versiones,
-			</summary>
-			<p>El control de versiones es una técnica utilizada en el desarrollo de 				software para gestionar y controlar los
-				cambios y versiones que se realizan en el código fuente de un 				proyecto. Es una herramienta que ayuda a los
-				desarrolladores a trabajar en equipo, manteniendo una copia segura 				y actualizada del código y permitiendo
-				una gestión de cambios en el mismo.</p>
+		<li>
+			<details>
+				<summary>
+					Introducción al control de versiones,
+				</summary>
+				<p>El control de versiones es una técnica utilizada en el desarrollo de software para gestionar y
+					controlar los
+					cambios y versiones que se realizan en el código fuente de un proyecto. Es una herramienta que ayuda
+					a los
+					desarrolladores a trabajar en equipo, manteniendo una copia segura y actualizada del código y
+					permitiendo
+					una gestión de cambios en el mismo.</p>
 
-			<h3>El control de versiones permite:</h3>
-			<ul>
-				<li> Registrar y gestionar los cambios realizados en el código 				fuente.</li>
-				<li> Mantener copias actualizadas del código en diferentes etapas 				del desarrollo.</li>
-				<li> Trabajar en equipo en el mismo código sin que se produzcan 				conflictos.</li>
-				<li> Revertir cambios y volver a versiones anteriores si es 				necesario.</li>
-				<li> Identificar quién hizo qué cambio en el código fuente.</li>
-				<li> Permitir una colaboración más eficiente en el desarrollo de 				software.</li>
-			</ul>
-			<p>Existen diferentes sistemas de control de versiones, siendo los más 				utilizados Git, SVN y Mercurial. </p>
-		</details></li>
-		<li><details>
-			<summary>
-				Introducción a la consola git CMD,
-			</summary>
-			<p>Git es un sistema de control de versiones muy popular para el 				desarrollo de software.</p>
-			<p>Permite a los desarrolladores colaborar en proyectos y realizar un 				seguimiento de los cambios en el código.
-			</p>
-			<p>Git se utiliza a través de la consola de comandos, y en sistemas 				operativos Windows, la herramienta cmd se
-				utiliza como la consola predeterminada.</p>
+				<h3>El control de versiones permite:</h3>
+				<ul>
+					<li> Registrar y gestionar los cambios realizados en el código fuente.</li>
+					<li> Mantener copias actualizadas del código en diferentes etapas del desarrollo.</li>
+					<li> Trabajar en equipo en el mismo código sin que se produzcan conflictos.</li>
+					<li> Revertir cambios y volver a versiones anteriores si es necesario.</li>
+					<li> Identificar quién hizo qué cambio en el código fuente.</li>
+					<li> Permitir una colaboración más eficiente en el desarrollo de software.</li>
+				</ul>
+				<p>Existen diferentes sistemas de control de versiones, siendo los más utilizados Git, SVN y Mercurial.
+				</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>
+					Introducción a la consola git CMD,
+				</summary>
+				<p>Git es un sistema de control de versiones muy popular para el desarrollo de software.</p>
+				<p>Permite a los desarrolladores colaborar en proyectos y realizar un seguimiento de los cambios en el
+					código.
+				</p>
+				<p>Git se utiliza a través de la consola de comandos, y en sistemas operativos Windows, la herramienta
+					cmd se utiliza como la consola predeterminada.</p>
+					<details>
+					<summary>
+						¿Cómo instalar la consola de git en Windows?
+					</summary>
+					<p>Luego de descargar la consola,que es un solo archivo .exe, pulsaremos la tecla Aplicaciones y precionamos Enter en ejecutar como administrador</p>
+					<p>Se nos abrirá un asiostente de instalación</p>
+					<p>Pasos de instalación</p>
+					<ol>
+					<li>
+						En la primera ventana, pulsamos en next y selecionamos el directorio de instalación. Favor dejarlo como predeterminado.
+					</li>
+					<li>
+						Pulsamos en next y elegimos los componentes de instalación. Crear un ícono en el escritorio(On the desktop), abrir en el menú contextual y buscar los actualizaciones al iniciar la aplicación. las demás casillas Las podremos marcar o desmarcar a nuestro gusto. Pulsamos en Next.
+					</li>
+						<li>
+							En las siguiente Ventana, elegimos nuestro editor de texto. Nano, Vim o el de su preferencia. pulsamos en Next.
+						</li>
+						<li>
+							Lo siguiente es elegir el nombre de la rama principal. lo dejamos en let git decide y pulsamos en Next.
+						</li>
+						<li>
+							Aquí, podremos seleccionar si podremos ejecutar comandos de la consola de git en otras consolas como cmd. recomendamos dejarlo en (Git from the command line and also from 3rd-party software) y pulsamos en Next.
+						</li>
+						<li>
+							Losiguiente es seleccionar la biblioteca SSL. lo elegimos (Use the native Windows Secure Channel library) y pulsamos en Next.
+						</li>
+						<li>
+							En el siguiente paso seleccionamos openSSH y precionamos en Next.
+						</li>
+						<li>
+							Después, seleccionamos (Checkout as-is, commit as-is). Esto es para que no modifique el tratamiento de salto de líneas en los commits. pulsamos en Next.
+						</li>
+						<li>
+							En este paso nos encontraremos en la elección de la consola. aquí elegiremos la nativa de Windows (Use Windows default console window) y pulsamos en Next.
+						</li>
+<li>
+	Luego nos encontraremos con el comportamiento del comando git pull. aquí seleccionamos (Default fast-forward or merge) y pulsamos Next.
+</li>
+<li>
+	En el ayudante de credenciales seleccionamos None y pulsamos Next.
+</li>
+<li>
+	Por último, en las ventanas que siguen, dejamos todo como está. pulsamos en Next hasta install.
+</li>
 
-			<p>La consola de comandos es una interfaz de usuario que utiliza comandos 				de texto en lugar de una interfaz
-				visual. A través de ella, se pueden realizar una gran cantidad de 				tareas, como mover archivos, instalar
-				software, ejecutar procesos, entre otras.</p>
+<p>¡Listo! ¡Tenemos gitinstalado!</p>
+					</ol>
+				</details>
+				<p>La consola de comandos es una interfaz de usuario que utiliza comandos de texto en lugar de una
+					interfaz visual. A través de ella, se pueden realizar una gran cantidad de tareas, como mover
+					archivos, instalar software, ejecutar procesos, entre otras.</p>
+				<p>Para utilizar Git y la consola de comandos, es necesario tener conocimientos básicos en la
+					utilización de estos. La consola se puede usar para ejecutar comandos de Git, como la clonación,
+					creación de ramas,
+					fusiones y envío de cambios a un servidor remoto.</p>
 
-			<p>Para utilizar Git y la consola de comandos, es necesario tener 				conocimientos básicos en la utilización de
-				estos. La consola se puede usar para ejecutar comandos de Git, 				como la clonación, creación de ramas,
-				fusiones y envío de cambios a un servidor remoto.</p>
+				<p>Es importante conocer la estructura básica de los comandos de Git, el funcionamiento de los
+					repositorios y las características específicas del sistema operativo que se está utilizando. Con la
+					práctica y la exploración, se pueden desarrollar habilidades avanzadas en el uso de Git y la consola
+					de comandos.
+				</p>
+			</details>
+		</li>
 
-			<p>Es importante conocer la estructura básica de los comandos de Git, el 				funcionamiento de los repositorios y
-				las características específicas del sistema operativo que se está 				utilizando. Con la práctica y la
-				exploración, se pueden desarrollar habilidades avanzadas en el uso 				de Git y la consola de comandos.</p>
-		</details></li>
-
-		<li><details><summary>
-			Navegación entre repositorios,
-		</summary>
-			Para navegar en los repositorios de Git, aquí hay algunos pasos básicos que puedes seguir:
-			<ol>
-				<li><p>Clonar un repositorio: El primer paso para navegar en un repositorio de Git es clonarlo en tu 					máquina local. Para hacer esto, utiliza el comando "git clone" seguido de la URL del repositorio. Por 					ejemplo:</p>
+		<li>
+			<details>
+				<summary>
+					Navegación entre repositorios,
+				</summary>
+				Para navegar en los repositorios de Git, aquí hay algunos pasos básicos que puedes seguir:
 				<ol>
-					<li>git clone https://github.com/nombre_usuario/nombre_repositorio.git</li>
-				</ol></li>
-				<li><p>Cambiar de directorio: Una vez que hayas clonado el repositorio, utiliza el comando "cd" para 					cambiar al directorio del repositorio:</p>
-				<ol>
-					<li>cd nombre_repositorio</li>
-				</ol></li>
-				<li><p>Ver ramas remotas: Puedes utilizar el comando "git branch -r" para ver las ramas remotas 					disponibles en el repositorio. Esto te mostrará una lista de las ramas que existen en el repositorio 					remoto.</p>
-				</li>
-				<li><p>Cambiar a una rama específica: Utiliza el comando "git checkout" seguido del nombre de la rama 					para cambiar a una rama específica. Por ejemplo:</p>
-<ol>				
-					<li>git checkout nombre_rama</li>
-				</ol></li>
-				<li><p>Ver el historial de commits: Puedes utilizar el comando 					"git log" para ver el historial de commits en la rama actual. Esto 					te mostrará información como el autor del commit, la fecha y hora, 					y el mensaje asociado.</p>
-				</li>
-				<li><p>Navegar en el historial de commits: Puedes utilizar 					comandos como "git diff" para ver las diferencias entre commits, 					"git show" para ver los detalles de un commit específico, y "git 					checkout" para cambiar entre diferentes commits. Estos comandos te 					permiten navegar y entender mejor el historial de cambios en el 					repositorio.</p>
-				</li></ol>
-			<p>Recuerda que estos son solo algunos ejemplos de comandos básicos para 				navegar en un repositorio de Git. Hay muchas más funcionalidades y 				comandos avanzados disponibles, dependiendo de tus necesidades. </p>
-		</details></li>
-		<li><details><summary>
-			Creación de repositorios git,
-		</summary>
-			<p>Para crear un repositorio de Git, sigue estos pasos:</p>
-			<ol>
-				<li><p>Abre tu terminal o línea de comandos.</p></li>
-				<li><p>Navega a la carpeta o directorio donde deseas crear el 					repositorio.</p>
-				<li><p>Ejecuta el comando "git init". Esto inicializará un 					repositorio de Git vacío en la ubicación actual.</p>
-				<li><p>Opcionalmente, puedes crear un archivo README.md en la 					carpeta para proporcionar información sobre el repositorio.</p></li>
-				<li><p>Añade archivos al repositorio utilizando el comando "git 					add <nombre_del_archivo>" o "git add ." para añadir todos 					los archivos en la carpeta.</p></li>
-				<li><p>Realiza un commit de los archivos añadidos utilizando el 					comando "git commit -m 'Mensaje del commit'". Esto guarda 					los cambios en el repositorio.</p></li>
-				<li><p>Si deseas conectar tu repositorio local con un repositorio 					remoto, puedes hacerlo con el comando "git remote add origin 					<url_del_repositorio_remoto>". Reemplaza 					<url_del_repositorio_remoto> con la URL del repositorio remoto.</p></li>
-				<li><p>Finalmente, puedes empujar tus cambios al repositorio 					remoto utilizando el comando "git push origin master". Esto 					enviará tus cambios al repositorio remoto.</p><br></li>
-			</ol>
-			<p>¡Y eso es todo!</p><br>
-			<p>Ahora has creado tu propio repositorio de Git. Puedes seguir estos 				pasos adicionales para trabajar con ramas y colaborar con otros.</p>
-		</details></li>
-		<li><details><summary>
-			configuración global y local de git,
-		</summary>
-			<p>Para configurar git a nivel global, puedes ejecutar los comandos:</p>
-			<ol>
-				<li><p>git config --global user.name "Tu nombre"</p></li>
-				<li><p>git config --global user.email "tuemail@ejemplo.com"</p></li>
-			</ol>
-			<br><p>Esto establecerá tu nombre y dirección de correo electrónico como 				global en todas las repositorios de git que uses en tu sistema.</p><br>
-
-			<p>Si quieres configurar git a nivel local en un repositorio específico, 				simplemente ejecuta los mismos comandos, pero sin el flag --global:</p><br>
-
-			<ol>
-				<li><p>git config user.name "Tu nombre"</p></li>
-				<li><p>git config user.email "tuemail@ejemplo.com"</p></li>
-			</ol><br>
-			<p>Esto configurará tu nombre y dirección de correo electrónico sólo para 				el repositorio en el que estás actualmente.</p>
-
-			<p>Puedes también usar el comando git config --list para ver todas las 				configuraciones de git en tu sistema.</p>
-		</details></li>
-		<li><details><summary>
-			Creación del primer commit.
-		</summary>
-			<p>Para crear tu primer commit en Git, sigue estos pasos:</p><br>
-			<ol>
-				<li><p>Inicializa un repositorio Git en tu directorio de trabajo. 					Puedes hacerlo ejecutando el siguiente comando en la línea de 					comandos:</p><br>
-
-				<ol>
-					<li>git init</li>
+					<li>
+						<p>Clonar un repositorio: El primer paso para navegar en un repositorio de Git es clonarlo en tu
+							máquina local. Para hacer esto, utiliza el comando "git clone" seguido de la URL del
+							repositorio. Por ejemplo:</p>
+						<ol>
+							<li>git clone https://github.com/nombre_usuario/nombre_repositorio.git</li>
+						</ol>
+					</li>
+					<li>
+						<p>Cambiar de directorio: Una vez que hayas clonado el repositorio, utiliza el comando "cd" para
+							cambiar al directorio del repositorio:</p>
+						<ol>
+							<li>cd nombre_repositorio</li>
+						</ol>
+					</li>
+					<li>
+						<p>Ver ramas remotas: Puedes utilizar el comando "git branch -r" para ver las ramas remotas
+							disponibles en el repositorio. Esto te mostrará una lista de las ramas que existen en el
+							repositorio remoto.</p>
+					</li>
+					<li>
+						<p>Cambiar a una rama específica: Utiliza el comando "git checkout" seguido del nombre de la
+							rama para cambiar a una rama específica. Por ejemplo:</p>
+						<ol>
+							<li>git checkout nombre_rama</li>
+						</ol>
+					</li>
+					<li>
+						<p>Ver el historial de commits: Puedes utilizar el comando "git log" para ver el historial de
+							commits en la rama actual. Esto te mostrará información como el autor del commit, la fecha y
+							hora, y el mensaje asociado.</p>
+					</li>
+					<li>
+						<p>Navegar en el historial de commits: Puedes utilizar comandos como "git diff" para ver las
+							diferencias entre commits, "git show" para ver los detalles de un commit específico, y "git
+							checkout" para cambiar entre diferentes commits. Estos comandos te permiten navegar y
+							entender mejor el historial de cambios en el repositorio.</p>
+					</li>
 				</ol>
-			</li>
-			<li><p>Ahora debes agregar los archivos que deseas incluir en tu commit. 				Puedes utilizar el comando git add seguido del nombre del archivo o 					directorio. Por ejemplo:</p><br>
+				<p>Recuerda que estos son solo algunos ejemplos de comandos básicos para navegar en un repositorio de
+					Git. Hay muchas más funcionalidades y comandos avanzados disponibles, dependiendo de tus
+					necesidades. </p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>
+					Creación de repositorios git,
+				</summary>
+				<p>Para crear un repositorio de Git, sigue estos pasos:</p>
+				<ol>
+					<li>
+						<p>Abre tu terminal o línea de comandos.</p>
+					</li>
+					<li>
+						<p>Navega a la carpeta o directorio donde deseas crear el repositorio.</p>
+					<li>
+						<p>Ejecuta el comando "git init". Esto inicializará un repositorio de Git vacío en la ubicación
+							actual.</p>
+					<li>
+						<p>Opcionalmente, puedes crear un archivo README.md en la carpeta para proporcionar información
+							sobre el repositorio.</p>
+					</li>
+					<li>
+						<p>Añade archivos al repositorio utilizando el comando "git add <nombre_del_archivo>" o "git add
+								." para añadir todos los archivos en la carpeta.</p>
+					</li>
+					<li>
+						<p>Realiza un commit de los archivos añadidos utilizando el comando "git commit -m 'Mensaje del
+							commit'". Esto guarda los cambios en el repositorio.</p>
+					</li>
+					<li>
+						<p>Si deseas conectar tu repositorio local con un repositorio remoto, puedes hacerlo con el
+							comando "git remote add origin <url_del_repositorio_remoto>". Reemplaza
+								<url_del_repositorio_remoto> con la URL del repositorio remoto.</p>
+					</li>
+					<li>
+						<p>Finalmente, puedes empujar tus cambios al repositorio remoto utilizando el comando "git push
+							origin master". Esto enviará tus cambios al repositorio remoto.</p><br>
+					</li>
+				</ol>
+				<p>¡Y eso es todo!</p><br>
+				<p>Ahora has creado tu propio repositorio de Git. Puedes seguir estos pasos adicionales para trabajar
+					con ramas y colaborar con otros.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>
+					configuración global y local de git,
+				</summary>
+				<p>Para configurar git a nivel global, puedes ejecutar los comandos:</p>
+				<ol>
+					<li>
+						<p>git config --global user.name "Tu nombre"</p>
+					</li>
+					<li>
+						<p>git config --global user.email "tuemail@ejemplo.com"</p>
+					</li>
+				</ol>
+				<br>
+				<p>Esto establecerá tu nombre y dirección de correo electrónico como global en todas las repositorios de
+					git que uses en tu sistema.</p><br>
 
-			<ol>
-				<li><p>git add archivo.txt</p></li>
-			</ol>
-			<p>También puedes usar git add . para agregar todos los archivos del 				directorio actual.</p></li>
+				<p>Si quieres configurar git a nivel local en un repositorio específico, simplemente ejecuta los mismos
+					comandos, pero sin el flag --global:</p><br>
 
-			<li><p>Comprueba el estado de los archivos que has agregado utilizando el 				comando git status. Verás los archivos que están listos para ser 				confirmados en tu próximo commit.</p>
-			</li>
+				<ol>
+					<li>
+						<p>git config user.name "Tu nombre"</p>
+					</li>
+					<li>
+						<p>git config user.email "tuemail@ejemplo.com"</p>
+					</li>
+				</ol><br>
+				<p>Esto configurará tu nombre y dirección de correo electrónico sólo para el repositorio en el que estás
+					actualmente.</p>
 
-			<li><p>Realiza tu commit utilizando el comando git commit. Puedes incluir 				un mensaje descriptivo sobre los cambios que estás confirmado utilizando 				la opción -m seguido del mensaje. Por ejemplo:</p><br>
+				<p>Puedes también usar el comando git config --list para ver todas las configuraciones de git en tu
+					sistema.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>
+					Creación del primer commit.
+				</summary>
+				<p>Para crear tu primer commit en Git, sigue estos pasos:</p><br>
+				<ol>
+					<li>
+						<p>Inicializa un repositorio Git en tu directorio de trabajo. Puedes hacerlo ejecutando el
+							siguiente comando en la línea de comandos:</p><br>
 
-			<ol>
-				<li><p>git commit -m "Mi primer commit"</p></li>
-			</ol>
+						<ol>
+							<li>git init</li>
+						</ol>
+					</li>
+					<li>
+						<p>Ahora debes agregar los archivos que deseas incluir en tu commit. Puedes utilizar el comando
+							git add seguido del nombre del archivo o directorio. Por ejemplo:</p><br>
 
-			<p>Esto creará un commit con los cambios que has agregado, junto con tu 				mensaje descriptivo asociado.</p>
+						<ol>
+							<li>
+								<p>git add archivo.txt</p>
+							</li>
+						</ol>
+						<p>También puedes usar git add . para agregar todos los archivos del directorio actual.</p>
+					</li>
 
-			<p>¡Y eso es todo!</p><br>
-			<p>Has creado tu primer commit en Git. Puedes seguir repitiendo estos 				pasos cada vez que desees realizar cambios y confirmarlos en tu 				repositorio.</p>
-		</details></li>
+					<li>
+						<p>Comprueba el estado de los archivos que has agregado utilizando el comando git status. Verás
+							los archivos que están listos para ser confirmados en tu próximo commit.</p>
+					</li>
+
+					<li>
+						<p>Realiza tu commit utilizando el comando git commit. Puedes incluir un mensaje descriptivo
+							sobre los cambios que estás confirmado utilizando la opción -m seguido del mensaje. Por
+							ejemplo:</p><br>
+
+						<ol>
+							<li>
+								<p>git commit -m "Mi primer commit"</p>
+							</li>
+						</ol>
+
+						<p>Esto creará un commit con los cambios que has agregado, junto con tu mensaje descriptivo
+							asociado.</p>
+
+						<p>¡Y eso es todo!</p><br>
+						<p>Has creado tu primer commit en Git. Puedes seguir repitiendo estos pasos cada vez que desees
+							realizar cambios y confirmarlos en tu repositorio.</p>
+			</details>
+		</li>
 	</ol>
 
 	<details>
