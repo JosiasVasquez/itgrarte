@@ -9,8 +9,7 @@
 <body>
 	<h1>Tercera sesión curso de control de versiones con git y github:</h1>
 	<h2>Temas vistos en la sesión:</h2>
-	<ul>
-		<li>Repaso de la sesión anterior,</li>
+	<ol>
 		<li>Que es el stash</li>
 		<li>Para que sirve el stash,</li>
 		<li>Cómo enviar los cambios al stash,</li>
@@ -24,62 +23,69 @@
 		<li>Solucionar errores de combinación de ramas.</li>
 		<li>Limpiar archivos sin seguimiento del repositorio</li>
 		<li>Como configurar el archivo .gitignore</li>
-	</ul>
-	<h2>Comandos vistos en la sesión:</h2>
-	<dl>
-		<dt>git stash</dt>
-		<dd>Agrega los cambios sin confirmar al stash, la entrada del stash tendrá como descripción el identificador del
-			último commit.</dd>
-		<dt>git stash save "Mensaje"</dt>
-		<dd>Agrega los cambios sin confirmar al stash, con una descripción para ubicar mejor la entrada del stash</dd>
-		<dt>git stash list</dt>
-		<dd>Muestra una lista de las entradas del stash, indicando cada entrada con un índice, siendo @{0} el índice de la
-			última entrada agregada al stash</dd>
-		<dt>git stash apply</dt>
-		<dd>aplica (recupera) la última entrada del stash que tiene el índice 0. Aunque recupera la entrada no la borra del
-			stash.</dd>
-		<dt>git stash apply stash@{1}</dt>
-		<dd>aplica la entrada del stash con el índice 1, se puede recuperar otra entrada del stash modificando el número
-			entre llaves por el número de índice según corresponda. Aunque recupera la
-			entrada no la borra del stash.</dd>
-		<dt>git stash pop</dt>
-		<dd>Recupera la última entrada agregada al stash, la que tiene el índice 0; A diferencia del comando con apply, este
-			comando si borra la entrada del stash.</dd>
-		<dt>git stash pop stash@{1}</dt>
-		<dd>Recupera la entrada del stash con índice 1, se puede elegir otra entrada del stash modificando el número entre
-			llaves por el que corresponda. A diferencia del comando con apply, este comando si borra la entrada del stash.
-		</dd>
-		<dt>git stash drop</dt>
-		<dd>elimina la última entrada del stash con índice 0.</dd>
-		<dt>git stash drop stash@{1}</dt>
-		<dd>elimina la entrada del stash con índice 1. Se puede eliminar otra entrada del stash modificando el número entre
-			llaves según corresponda.</dd>
-		<dt>git stash clear</dt>
-		<dd>Borra todas las entradas del stash.</dd>
-		<dt>git tag -d etiqueta</dt>
-		<dd>Elimina la etiqueta indicada</dd>
-		<dt>git tag -D etiqueta</dt>
-		<dd>Fuerza la eliminación de la etiqueta cuando el comando anterior da error.</dd>
-		<dt>git branch -d nombre de rama</dt>
-		<dd>elimina la rama indicada.</dd>
-		<dt>git branch -D nombre_rama</dt>
-		<dd>Fuerza la eliminación de la rama cuando el comando anterior da error.</dd>
-		<dt>git merge nombre de rama</dt>
-		<dd>Combina la rama indicada con la rama actual</dd>
-		<dt>git rebase nombre de rama</dt>
-		<dd>Cambia la base de la rama actual a el último commit de la rama indicada.</dd>
-		<dt>git clean -f</dt>
-		<dd>elimina los archivos que no tienen seguimiento del repositorio.</dd>
-	</dl>
-	<h2>Grabación de la sesión:</h2>
-	<p>nota: recomiendo adelantar la grabación al minuto 35, por toda la parte experimental que tuvimos al principio de la
-		clase intentando replicar el error de cambios no confirmados.</p>
-	<iframe src="https://drive.google.com/file/d/1mRp7z15jqfLR9zWuzjFeV7ys8jMXOdgj/preview" width="640" height="480"
-		allow="autoplay"></iframe>
-	<p>Enlace a la grabación si lo prefieres <a
-			href="https://drive.google.com/file/d/1mRp7z15jqfLR9zWuzjFeV7ys8jMXOdgj/view?usp=share_link">Grabación tercera
-			sesión</a></p>
+	</ol>
+
+	<details><summary>
+		<h2>Comandos vistos en la sesión:</h2>
+	</summary>
+		<dl>
+			<dt>git stash</dt>
+			<dd>Agrega los cambios sin confirmar al stash, la entrada del stash tendrá 				como descripción el identificador del
+				último commit.</dd>
+			<dt>git stash save "Mensaje"</dt>
+			<dd>Agrega los cambios sin confirmar al stash, con una descripción para 				ubicar mejor la entrada del stash</dd>
+			<dt>git stash list</dt>
+			<dd>Muestra una lista de las entradas del stash, indicando cada entrada 				con un índice, siendo @{0} el índice de la
+				última entrada agregada al stash</dd>
+			<dt>git stash apply</dt>
+			<dd>aplica (recupera) la última entrada del stash que tiene el índice 0. 				Aunque recupera la entrada no la borra del
+				stash.</dd>
+			<dt>git stash apply stash@{1}</dt>
+			<dd>aplica la entrada del stash con el índice 1, se puede recuperar otra 				entrada del stash modificando el número
+				entre llaves por el número de índice según corresponda. Aunque 				recupera la
+				entrada no la borra del stash.</dd>
+			<dt>git stash pop</dt>
+			<dd>Recupera la última entrada agregada al stash, la que tiene el índice 				0; A diferencia del comando con apply, este
+				comando si borra la entrada del stash.</dd>
+			<dt>git stash pop stash@{1}</dt>
+			<dd>Recupera la entrada del stash con índice 1, se puede elegir otra 				entrada del stash modificando el número entre
+				llaves por el que corresponda. A diferencia del comando con apply, 				este comando si borra la entrada del stash.
+			</dd>
+			<dt>git stash drop</dt>
+			<dd>elimina la última entrada del stash con índice 0.</dd>
+			<dt>git stash drop stash@{1}</dt>
+			<dd>elimina la entrada del stash con índice 1. Se puede eliminar otra 				entrada del stash modificando el número entre
+				llaves según corresponda.</dd>
+			<dt>git stash clear</dt>
+			<dd>Borra todas las entradas del stash.</dd>
+			<dt>git tag -d etiqueta</dt>
+			<dd>Elimina la etiqueta indicada</dd>
+			<dt>git tag -D etiqueta</dt>
+			<dd>Fuerza la eliminación de la etiqueta cuando el comando anterior da 				error.</dd>
+			<dt>git branch -d nombre de rama</dt>
+			<dd>elimina la rama indicada.</dd>
+			<dt>git branch -D nombre_rama</dt>
+			<dd>Fuerza la eliminación de la rama cuando el comando anterior da error.</		dd>
+			<dt>git merge nombre de rama</dt>
+			<dd>Combina la rama indicada con la rama actual</dd>
+			<dt>git rebase nombre de rama</dt>
+			<dd>Cambia la base de la rama actual a el último commit de la rama 			indicada.</dd>
+			<dt>git clean -f</dt>
+			<dd>elimina los archivos que no tienen seguimiento del repositorio.</dd>
+		</dl>
+	/details>
+	<details><summary>
+		<h2>Grabación de la sesión:</h2>
+	</summary>
+		<p>nota: recomiendo adelantar la grabación al minuto 35, por toda la parte 			experimental que tuvimos al principio de la
+			clase intentando replicar el error de cambios no confirmados.</p>
+		<iframe src="https://drive.google.com/file/			d/1mRp7z15jqfLR9zWuzjFeV7ys8jMXOdgj/			preview" width="640" height="480"
+			allow="autoplay"></iframe>
+		<p>Enlace a la grabación si lo prefieres <a
+				href="https://drive.google.com/file/d/1mRp7z15jqfLR9zWuzjFeV7ys8jMXOdgj/view?usp=share_link">Grabación tercera
+				sesión</a></p>
 <a href="index.htm" role="button">Volver a la portada del curso</a>
+	</details>
 <footer>
 	<p><small>Josias Vásquez</small></p>
 	<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Atribución-CompartirIgual 4.0 Internacional</a>.</p>
