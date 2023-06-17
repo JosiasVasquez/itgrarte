@@ -10,7 +10,19 @@
 	<h1>Tercera sesión curso de control de versiones con git y github:</h1>
 	<h2>Temas vistos en la sesión:</h2>
 	<ol>
-		<li>Que es el stash</li>
+		<li><details><summary>
+			Que es el stash
+		</summary>
+			<p>El stash en Git es una herramienta muy útil que te permite guardar los 				cambios que aún no has registrado en un commit, pero que no quieres 				descartar ni comprometer en ese momento. El stash es útil especialmente 				cuando necesitas cambiar de rama o guardar temporalmente tus 				modificaciones para trabajar en otra tarea.</p><br>
+
+			<p>Cuando ejecutas el comando git stash, Git guarda temporalmente tus 				cambios en una área especial llamada "stash" y revierte tu directorio de 				trabajo a la versión más reciente confirmada. Esto te permite hacer 				cambios en una rama diferente o realizar otras tareas sin comprometer tus 				modificaciones actuales.</p><br>
+
+			<p>Puedes aplicar el stash más reciente a la rama en la que estás 				trabajando actualmente utilizando el comando git stash apply. Esto 				recuperará los cambios guardados en el stash y los aplicará sobre tu 				directorio de trabajo actual. Además, el stash no se eliminará, así que 				podrás aplicarlo nuevamente si es necesario.</p><br>
+
+			<p>También puedes crear múltiples stashes si tienes varias tareas en 				curso. Puedes listar todos los stashes existentes utilizando el comando 				git stash list y aplicar un stash específico utilizando git stash 				apply stash@{n}, donde "n" es el índice del stash que deseas aplicar.</p><br>
+
+			<p>El stash es una herramienta muy útil en Git para guardar temporalmente 				tus cambios sin comprometerlos en un commit y permitirte trabajar de 				manera más eficiente en diferentes ramas o tareas. </p><br>
+		</details></li>
 		<li>Para que sirve el stash,</li>
 		<li>Cómo enviar los cambios al stash,</li>
 		<li>Cómo recuperar el stash con apply y pop.</li>
