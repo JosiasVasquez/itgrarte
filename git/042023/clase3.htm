@@ -39,7 +39,24 @@
 			</ol>
 			<p>En resumen, el stash te permite guardar temporalmente tus cambios en 				una área especial para poder cambiar de rama, resolver conflictos 				o experimentar libremente. Esto te brinda una mayor flexibilidad y 				eficiencia en tu flujo de trabajo en Git.</p>
 		</details></li>
-		<li>Cómo enviar los cambios al stash,</li>
+		<li><details><summary>
+			Cómo enviar los cambios al stash,
+		</summary>
+			<p>Para enviar tus cambios al stash en Git, puedes seguir los siguientes 				pasos:</p>
+			<ol>
+				<li><p>Asegúrate de tener cambios no confirmados en tu directorio 					de trabajo. Puedes verificarlo ejecutando el comando git status. 					Si hay cambios pendientes, deberían ser enumerados.</p>
+				</li>
+				<li><p>Ejecuta el comando git stash. Esto guardará tus cambios en 					un stash y limpiará tu directorio de trabajo para que quede en el 					último commit.</p>
+				</li>
+				<li><p>Opcionalmente, puedes añadir un mensaje descriptivo al 					stash utilizando el parámetro -m. Por ejemplo: git stash save "Mis 					cambios temporales".</p>
+				</li>
+				<li><p>Si tienes archivos sin seguimiento que deseas incluir en el 					stash, utiliza el parámetro -u o --include-untracked. Por ejemplo: 					git stash save -u.</p>
+				</li>
+				<li><p>Una vez que hayas enviado tus cambios al stash, puedes 					verificar que el stash se haya creado correctamente ejecutando el 				comando git stash list. Esto te mostrará una lista de todos los stashes 					existentes en tu repositorio.</p>
+
+				<p>Después de enviar tus cambios al stash, puedes cambiar de rama, 					resolver conflictos o realizar otras tareas. Y cuando estés listo 					para retomar tus cambios, puedes aplicar el stash utilizando el 					comando git stash apply o git stash pop. </p>
+				</li>
+		</details></li>
 		<li>Cómo recuperar el stash con apply y pop.</li>
 		<li>Cómo borrar elementos del stash.</li>
 		<li>Cómo limpiar el stash.</li>
