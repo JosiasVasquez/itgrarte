@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 	<link rel="stylesheet" src="../../media/HojaEstilos.css" />
 	<meta charset="UTF-8">
@@ -13,52 +14,119 @@
 	<meta name="language" content="Spanish">
 	<meta name="author" content="Josias Vásquez">
 </head>
+
 <body>
 	<h1>Segunda sesión curso de control de versiones con git y github:</h1>
 	<h2>Temas vistos en la sesión:</h2>
 	<ol>
-		<li>Repaso de la sesión anterior,</li>
-		<li>Que es una clave gpg,</li>
-		<li>como crear una clave gpg,</li>
-		<li>Como configurar la firma de commits y tags con la clave gpg creada,</li>
-		<li>Que son las tags,</li>
-		<li>como asignar un tag a un commit,</li>
-		<li>Que son las ramas</li>
-		<li>como crear ramas</li>
+		<details>
+			<summary>
+				<li>Repaso de la sesión anterior,</li>
+			</summary>
+
+		</details>
+
+		<details>
+			<summary>
+				<li>Que es una clave gpg,</li>
+			</summary>
+
+		</details>
+
+		<details>
+			<summary>
+				<li>como crear una clave gpg,</li>
+			</summary>
+
+		</details>
+
+		<details>
+			<summary>
+				<li>Como configurar la firma de commits y tags con la clave gpg creada,</li>
+			</summary>
+
+		</details>
+
+		<details>
+			<summary>
+				<li>Que son las tags,</li>
+			</summary>
+
+		</details>
+
+		<details>
+			<summary>
+				<li>como asignar un tag a un commit,</li>
+			</summary>
+
+		</details>
+
+		<details>
+			<summary>
+				<li>Que son las ramas</li>
+			</summary>
+
+		</details>
+
+		<details>
+			<summary>
+				<li>como crear ramas</li>
+			</summary>
+
+		</details>
+
 	</ol>
-<h2>Comandos utilizados en clase.</h2>
-<dl>
-	<dt>gpg --full-generate-key</dt>
-	<dd>Inicia la creación de una clave gpg</dd>
-	<dt>gpg --list-secret-keys --keyid-format=long</dt>
-	<dd>Muestra información en la consola de las claves gpg existentes</dd>
-	<dt>gpg --list-secret-keys --keyid-format=long &gt miGPG.txt</dt>
-	<dd>Guarda en el archivo miGPG.txt la información de las claves gpg existentes</dd>
-	<dt>git config --global user.signingkey identificador</dt>
-	<dd>Configura la firma global con la clave gpg especificada mediante el identificador</dd>
-	<dt>git config --global commit.gpgsign true</dt>
-	<dd>Configura que siempre se firmen los commits</dd>
-	<dt>git config --global tag.gpgSign true</dt>
-	<dd>Configura que siempre se firmen los tags</dd>
-	<dt>git log --show-signature > log.txt</dt>
-	<dd>Muestra el historial de commits con indicaciones de la firma y guarda la salida en el archivo log.txt</dd>
-	<dt>git tag -a etiqueta -m "descripción del tag" nombre</dt>
-	<dd>Crea un tag (etiqueta en español) con la descripción y el nombre indicado.</dd>
-	<dt>git branch</dt>
-	<dd>Muestra las ramas disponibles en un repositorio, la rama actual se marca con un símbolo *</dd>
-	<dt>git branch NombreRama</dt>
-	<dd>Crea una rama con el nombre indicado</dd>
-</dl>
-<h2>Grabación de la clase:</h2>
-<iframe src="https://drive.google.com/file/d/1vFthhVXPKgCQzwJI_uWN3T_G30s7569-/preview" width="640" height="480"
-	allow="autoplay"></iframe>
-<p>Enlace a la grabación si lo prefieres <a
-		href="https://drive.google.com/file/d/1vFthhVXPKgCQzwJI_uWN3T_G30s7569-/view?usp=sharing">Grabación segunda
-		sesión</a></p>
+
+	<details>
+		<summary>
+			<h2>Comandos utilizados en clase.</h2>
+		</summary>
+		<dl>
+			<dt>gpg --full-generate-key</dt>
+			<dd>Inicia la creación de una clave gpg</dd>
+			<dt>gpg --list-secret-keys --keyid-format=long</dt>
+			<dd>Muestra información en la consola de las claves gpg existentes</dd>
+			<dt>gpg --list-secret-keys --keyid-format=long &gt miGPG.txt</dt>
+			<dd>Guarda en el archivo miGPG.txt la información de las claves gpg existentes</dd>
+			<dt>git config --global user.signingkey identificador</dt>
+			<dd>Configura la firma global con la clave gpg especificada mediante el identificador</dd>
+			<dt>git config --global commit.gpgsign true</dt>
+			<dd>Configura que siempre se firmen los commits</dd>
+			<dt>git config --global tag.gpgSign true</dt>
+			<dd>Configura que siempre se firmen los tags</dd>
+			<dt>git log --show-signature > log.txt</dt>
+			<dd>Muestra el historial de commits con indicaciones de la firma y guarda la salida en el archivo log.txt
+			</dd>
+			<dt>git tag -a etiqueta -m "descripción del tag" nombre</dt>
+			<dd>Crea un tag (etiqueta en español) con la descripción y el nombre indicado.</dd>
+			<dt>git branch</dt>
+			<dd>Muestra las ramas disponibles en un repositorio, la rama actual se marca con un símbolo *</dd>
+			<dt>git branch NombreRama</dt>
+			<dd>Crea una rama con el nombre indicado</dd>
+
+		</dl>
+	</details>
+
+	<details>
+		<summary>
+			<h2>Grabación de la clase:</h2>
+		</summary>
+		<iframe src="https://drive.google.com/file/d/1vFthhVXPKgCQzwJI_uWN3T_G30s7569-/preview" width="640" height="480"
+			allow="autoplay"></iframe>
+		<p>Enlace a la grabación si lo prefieres <a
+				href="https://drive.google.com/file/d/1vFthhVXPKgCQzwJI_uWN3T_G30s7569-/view?usp=sharing">Grabación
+				segunda
+				sesión</a></p>
+	</details>
+
 	<a href="index.htm" role="button">Volver a la portada del curso</a>
 	<footer>
 		<p><small>Josias Vásquez</small></p>
-		<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Atribución-CompartirIgual 4.0 Internacional</a>.</p>
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia Creative Commons"
+					style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Esta
+			obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative
+				Commons Atribución-CompartirIgual 4.0 Internacional</a>.</p>
 	</footer>
 </body>
+
 </html>
