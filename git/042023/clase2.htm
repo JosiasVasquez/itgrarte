@@ -27,21 +27,52 @@
 			<p>La clave GPG (GnuPG o GNU Privacy Guard) es una herramienta de cifrado 				y firma digital que permite a los usuarios proteger y autentificar sus 				comunicaciones y archivos. Funciona mediante la creación de un par de 				claves criptográficas, una pública y otra privada. La clave pública se 				comparte con otros usuarios para que puedan cifrar mensajes o archivos 				destinados al propietario de la clave, y la clave privada se mantiene en 				secreto y se utiliza para descifrar los mensajes cifrados y firmar 				digitalmente documentos. La clave GPG es ampliamente utilizada en el campo 				de la seguridad informática y la protección de la privacidad en la 				comunicación electrónica.</p>
 		</details>
 		</li>
-
+		<li>
 		<details>
 			<summary>
-				<li>como crear una clave gpg,</li>
+				como crear una clave gpg,
 			</summary>
 
 		</details>
-
+		</li>
+		<li>
 		<details>
 			<summary>
-				<li>Como configurar la firma de commits y tags con la clave gpg creada,</li>
+				Como configurar la firma de commits y tags con la clave gpg creada,
 			</summary>
+			<p>Para configurar la firma de commits y tags con tu clave GPG en Git, 				sigue estos pasos:</p>
+			<ol>
+				<li><p>Asegúrate de haber generado tu par de claves GPG siguiendo 					los pasos descritos anteriormente.</p>
+				</li>
+				<li>
+					<p>Abre una terminal o línea de comandos en tu sistema 						operativo.</p>
+				</li>
+				<li>
+					<p>Ejecuta el siguiente comando para configurar Git para 						utilizar tu clave GPG al firmar commits:</p>
+					<p>git config --global user.signingkey ID_DE_LA_CLAVE</p>
+					<p>Reemplaza `ID_DE_LA_CLAVE` con la ID de la clave GPG 						generada en  la sección anterior.</p>
+				</li>
+<li>
+					<p>Configura Git para firmar automáticamente todos los 						commits que realices con la siguiente configuración global:</p>
+					<p>git config --global commit.gpgsign true</p>
+				</li>
+				<li>
+					<p>Ahora, cada vez que realices un commit, Git te pedirá 						la contraseña de tu clave GPG y firmará automáticamente el 						commit.</p>
+				</li>
+				<li>
+				<li>
+					<p>Si también deseas firmar los tags que creas en Git, 						ejecuta el siguiente comando para configurar Git:</p>
+					<p>git config --global tag.gpgsign true</p>
+				</li>
+				<li>
+					<p>A partir de ahora, al crear un tag, Git te pedirá la 						contraseña de tu clave GPG y firmará el tag.</p>
+				</li>
+			</ol>
+
+			<p>¡Y eso es todo! Ahora, tus commits y tags estarán firmados usando tu 				clave GPG. Esto ayuda a garantizar la integridad y autenticidad de 				tus cambios en Git. </p>
 
 		</details>
-
+		</li>
 		<details>
 			<summary>
 				<li>Que son las tags,</li>
