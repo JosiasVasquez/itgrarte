@@ -115,13 +115,28 @@
 
 		</details>
 		</li>
+		<li>
 		<details>
 			<summary>
-				<li>Que son las tags,</li>
+				Que son las tags,
 			</summary>
+			<p>En Git, un tag es una referencia estática a un punto específico en la 				historia de un repositorio. Se utiliza para marcar versiones importantes o 				hitos en el desarrollo de un proyecto. Los tags son útiles para marcar 				versiones de lanzamiento, versiones estables o cualquier otro estado 				significativo del software.</p>
+
+			<p>Un tag se puede aplicar a un commit específico y se utiliza para 				identificar ese commit de manera más fácil. A diferencia de las ramas 					(branches) en Git, que pueden moverse hacia delante con nuevos 					commits, los tags siempre apuntan a un commit específico y no 					cambian con nuevas confirmaciones.</p>
+
+			<p>Los tags son útiles para realizar seguimiento de las versiones de 				lanzamiento del software e ir fácilmente a un punto específico en la 				historia del repositorio. Se muestran en la salida del comando git log y 				se utilizan comúnmente para generar lanzamientos o identificar commits 				importantes en el desarrollo de un proyecto.</p>
+
+			<p>Para crear un tag en Git, se usa el siguiente comando:</p>
+			<p>git tag -a NOMBRE_DEL_TAG -m "Mensaje del tag" COMMIT</p>
+			<p>Reemplaza NOMBRE_DEL_TAG con el nombre que quieras asignar al tag, 				"Mensaje del tag" por un mensaje descriptivo y COMMIT por el identificador 				del commit al que deseas aplicar el tag.</p>
+
+			<p>Para ver los tags existentes en un repositorio, puedes utilizar el 				comando git tag, y para ver más detalles sobre un tag específico, puedes 				usar git show NOMBRE_DEL_TAG. También puedes encontrar tags específicos
+				utilizando el comando git log --tags.</p>
+
+			<p>En resumen, un tag en Git es una referencia inmutable a un punto 				específico en la historia del repositorio, como una versión de lanzamiento 				o un estado importante del proyecto.</p>
 
 		</details>
-
+		</li>
 		<details>
 			<summary>
 				<li>como asignar un tag a un commit,</li>
