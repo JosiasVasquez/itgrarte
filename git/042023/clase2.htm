@@ -32,7 +32,49 @@
 			<summary>
 				como crear una clave gpg,
 			</summary>
-
+				<p>Para crear una clave GPG en Git, puedes seguir estos pasos:</p>
+				<ol>
+					<li>
+						<p>Asegúrate de tener GnuPG instalado en tu 							sistema operativo. Puedes verificar esto 							ejecutando el comando gpg --version en una 							terminal o línea de comandos. Si no está 							instalado, puedes descargarlo e instalarlo desde 							el sitio web oficial de GnuPG.</p>
+					</li>
+					<li>
+						<p>Abre una terminal o línea de comandos en tu 							sistema operativo.</p>
+					</li>
+					<li>
+						<p>Ejecuta el siguiente comando para generar tu 							par de claves GPG:</p>
+						<p>gpg --gen-key</p>
+</li>
+					<li>					
+						<p>Se te pedirá que elijas el tipo de clave que 							deseas generar. Puedes elegir RSA o DSA. 							La opción por defecto suele ser RSA.</p>
+					</li>
+					<li>
+						<p>A continuación, se te pedirá que ingreses el 							tamaño de la clave. Puedes elegir un 							tamaño de 2048 bits o superior para mayor 							seguridad.</p>
+					</li>
+					<li>
+						<p>Después, se te solicitará que ingreses el 							tiempo de expiración de la clave. Puedes 							seleccionar una fecha de expiración o dejarla sin 							establecer para que sea válida indefinidamente.</p>
+					</li>
+					<li>
+						<p>Luego, se te pedirá que ingreses tu nombre, 							dirección de correo electrónico y un 							comentario.Estos campos se utilizarán para 							identificar tu clave GPG.</p>
+					</li>
+					<li>
+						<p>Después de ingresar la información, se te 							pedirá que ingreses una frase de contraseña para 							proteger tu clave. Ingresa una contraseña segura y 							recuérdala, ya que la necesitarás al utilizar la 							clave.</p>
+					</li>
+					<li>
+						<p>GnuPG generará tu par de claves públicas y 							privadas y las almacenará en tu sistema.</p>
+					</li>
+					<li>
+						<p>Para ver tu clave GPG generada, ejecuta el 							siguiente comando:</p>
+						 <p>gpg --list-secret-keys --keyid-format LONG</p>
+					</li>
+					<li>					
+						<p>Busca la "ID de la clave" asociada a tu clave 							GPG. Debería tener el formato "pub														rsa2048/							ID_DE_LA_CLAVE".</p>
+					</li>
+					<li>					
+						<p>Copia la ID de la clave (ejemplo: 							ID_DE_LA_CLAVE) y ejecuta el siguiente comando 							para agregarlo a tu configuración de Git:</p>
+						<p>git config --global user.signingkey ID_DE_LA_CLAVE</p>
+					</li>
+</ol>				
+			<p>¡Y eso es todo! Ahora puedes utilizar tu clave GPG generada para firmar 				tus commits en Git ejecutando git commit -S o configurar Git para que 				firme automáticamente todos los commits. Puedes encontrar más información 				sobre cómo configurar la firma automática de commits en la siguiente 					sección.</p> 		
 		</details>
 		</li>
 		<li>
