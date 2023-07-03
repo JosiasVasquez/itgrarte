@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 	<link rel="stylesheet" src="../../media/HojaEstilos.css" />
 	<meta charset="UTF-8">
@@ -21,222 +20,119 @@
 	<ol>
 		<li>
 		<details>
-			<summary>
-				Que es una clave gpg,
-			</summary>
+			<summary>Que es una clave gpg,</summary>
 			<p>La clave GPG (GnuPG o GNU Privacy Guard) es una herramienta de cifrado 				y firma digital que permite a los usuarios proteger y autentificar sus 				comunicaciones y archivos. Funciona mediante la creación de un par de 				claves criptográficas, una pública y otra privada. La clave pública se 				comparte con otros usuarios para que puedan cifrar mensajes o archivos 				destinados al propietario de la clave, y la clave privada se mantiene en 				secreto y se utiliza para descifrar los mensajes cifrados y firmar 				digitalmente documentos. La clave GPG es ampliamente utilizada en el campo 				de la seguridad informática y la protección de la privacidad en la 				comunicación electrónica.</p>
-		</details>
-		</li>
-		<li>
-		<details>
-			<summary>
-				como crear una clave gpg,
-			</summary>
-				<p>Para crear una clave GPG en Git, puedes seguir estos pasos:</p>
+			<details>
+				<summary><h3>Cómo crear una clave gpg?</h3></summary>
+					<p>Para crear una clave GPG en Git, puedes seguir estos pasos:</p>
+					<ol>
+						<li> <p>Asegúrate de tener GnuPG instalado en tu 							sistema operativo. Puedes verificar esto 							ejecutando el comando gpg --version en una 							terminal o línea de comandos. Si no está 							instalado, puedes descargarlo e instalarlo desde 							el sitio web oficial de GnuPG.</p></li>
+						<li> <p>Abre una terminal o línea de comandos en tu sistema operativo.</p></li>
+						<li> <p>Ejecuta el siguiente comando para generar tu par de claves GPG:</p>
+							<p>gpg --gen-key</p></li>
+						<li> <p>Se te pedirá que elijas el tipo de clave que deseas generar. Puedes elegir RSA o DSA. La opción por defecto suele ser RSA.</p></li>
+						<li> <p>A continuación, se te pedirá que ingreses el tamaño de la clave. Puedes elegir un tamaño de 2048 bits o superior para mayor seguridad.</p></li>
+						<li> <p>Después, se te solicitará que ingreses el tiempo de expiración de la clave. Puedes seleccionar una fecha de expiración o dejarla sin establecer para que sea válida indefinidamente.</p></li>
+						<li> <p>Luego, se te pedirá que ingreses tu nombre, dirección de correo electrónico y un comentario. Estos campos se utilizarán para identificar tu clave GPG.</p></li>
+						<li> <p>Después de ingresar la información, se te pedirá que ingreses una frase de contraseña para proteger tu clave. Ingresa una contraseña segura y 							recuérdala, ya que la necesitarás al utilizar la clave.</p></li>
+						<li> <p>GnuPG generará tu par de claves públicas y privadas y las almacenará en tu sistema.</p></li>
+						<li> <p>Para ver tu clave GPG generada, ejecuta el siguiente comando:</p>
+							<p>gpg --list-secret-keys --keyid-format LONG</p></li>
+<li> <p>Busca la "ID de la clave" asociada a tu clave GPG. Debería tener el formato "pubrsa2048/ID_DE_LA_CLAVE".</p></li>
+<li> <p>Copia el ID de la clave (ejemplo: ID_DE_LA_CLAVE) y ejecuta el siguiente comando para agregarlo a tu configuración de Git:</p>
+							<p>git config --global user.signingkey ID_DE_LA_CLAVE</p></li>
+	</ol>
+				<p>¡Y eso es todo! Ahora puedes utilizar tu clave GPG generada para firmar tus commits en Git ejecutando git commit -S o configurar Git para que firme automáticamente todos los commits. Puedes encontrar más información sobre cómo configurar la firma automática de commits en la siguiente sección.</p>
+			</details>
+			<details>
+				<summary><h3>¿Cómo configurar la firma de commits y tags con la clave gpg creada?</h3></summary>
+				<p>Para configurar la firma de commits y tags con tu clave GPG en Git, sigue estos pasos:</p>
 				<ol>
-					<li>
-						<p>Asegúrate de tener GnuPG instalado en tu 							sistema operativo. Puedes verificar esto 							ejecutando el comando gpg --version en una 							terminal o línea de comandos. Si no está 							instalado, puedes descargarlo e instalarlo desde 							el sitio web oficial de GnuPG.</p>
-					</li>
-					<li>
-						<p>Abre una terminal o línea de comandos en tu 							sistema operativo.</p>
-					</li>
-					<li>
-						<p>Ejecuta el siguiente comando para generar tu 							par de claves GPG:</p>
-						<p>gpg --gen-key</p>
-</li>
-					<li>					
-						<p>Se te pedirá que elijas el tipo de clave que 							deseas generar. Puedes elegir RSA o DSA. 							La opción por defecto suele ser RSA.</p>
-					</li>
-					<li>
-						<p>A continuación, se te pedirá que ingreses el 							tamaño de la clave. Puedes elegir un 							tamaño de 2048 bits o superior para mayor 							seguridad.</p>
-					</li>
-					<li>
-						<p>Después, se te solicitará que ingreses el 							tiempo de expiración de la clave. Puedes 							seleccionar una fecha de expiración o dejarla sin 							establecer para que sea válida indefinidamente.</p>
-					</li>
-					<li>
-						<p>Luego, se te pedirá que ingreses tu nombre, 							dirección de correo electrónico y un 							comentario.Estos campos se utilizarán para 							identificar tu clave GPG.</p>
-					</li>
-					<li>
-						<p>Después de ingresar la información, se te 							pedirá que ingreses una frase de contraseña para 							proteger tu clave. Ingresa una contraseña segura y 							recuérdala, ya que la necesitarás al utilizar la 							clave.</p>
-					</li>
-					<li>
-						<p>GnuPG generará tu par de claves públicas y 							privadas y las almacenará en tu sistema.</p>
-					</li>
-					<li>
-						<p>Para ver tu clave GPG generada, ejecuta el 							siguiente comando:</p>
-						 <p>gpg --list-secret-keys --keyid-format LONG</p>
-					</li>
-					<li>					
-						<p>Busca la "ID de la clave" asociada a tu clave 							GPG. Debería tener el formato "pub														rsa2048/							ID_DE_LA_CLAVE".</p>
-					</li>
-					<li>					
-						<p>Copia la ID de la clave (ejemplo: 							ID_DE_LA_CLAVE) y ejecuta el siguiente comando 							para agregarlo a tu configuración de Git:</p>
+					<li><p>Asegúrate de haber generado tu par de claves GPG siguiendo los pasos descritos anteriormente.</p></li>
+					<li> <p>Abre una terminal o línea de comandos en tu sistema operativo.</p></li>
+					<li> <p>Ejecuta el siguiente comando para configurar Git para utilizar tu clave GPG al firmar commits:</p>
 						<p>git config --global user.signingkey ID_DE_LA_CLAVE</p>
-					</li>
-</ol>				
-			<p>¡Y eso es todo! Ahora puedes utilizar tu clave GPG generada para firmar 				tus commits en Git ejecutando git commit -S o configurar Git para que 				firme automáticamente todos los commits. Puedes encontrar más información 				sobre cómo configurar la firma automática de commits en la siguiente 					sección.</p> 		
+						<p>Reemplaza `ID_DE_LA_CLAVE` con la ID de la clave GPG generada en  la sección anterior.</p></li>
+	<li> <p>Configura Git para firmar automáticamente todos los commits que realices con la siguiente configuración global:</p>
+						<p>git config --global commit.gpgsign true</p></li>
+					<li> <p>Ahora, cada vez que realices un commit, Git te pedirá la contraseña de tu clave GPG y firmará automáticamente el commit.</p></li>
+					<li> <p>Si también deseas firmar los tags que creas en Git, ejecuta el siguiente comando para configurar Git:</p>
+						<p>git config --global tag.gpgsign true</p></li>
+					<li> <p>A partir de ahora, al crear un tag, Git te pedirá la contraseña de tu clave GPG y firmará el tag.</p></li>
+				</ol>
+				<p>¡Y eso es todo! Ahora, tus commits y tags estarán firmados usando tu clave GPG. Esto ayuda a garantizar la integridad y autenticidad de tus cambios en Git.</p>	
+			</details>
 		</details>
-		</li>
 		<li>
 		<details>
-			<summary>
-				Como configurar la firma de commits y tags con la clave gpg creada,
-			</summary>
-			<p>Para configurar la firma de commits y tags con tu clave GPG en Git, 				sigue estos pasos:</p>
-			<ol>
-				<li><p>Asegúrate de haber generado tu par de claves GPG siguiendo 					los pasos descritos anteriormente.</p>
-				</li>
-				<li>
-					<p>Abre una terminal o línea de comandos en tu sistema 						operativo.</p>
-				</li>
-				<li>
-					<p>Ejecuta el siguiente comando para configurar Git para 						utilizar tu clave GPG al firmar commits:</p>
-					<p>git config --global user.signingkey ID_DE_LA_CLAVE</p>
-					<p>Reemplaza `ID_DE_LA_CLAVE` con la ID de la clave GPG 						generada en  la sección anterior.</p>
-				</li>
-<li>
-					<p>Configura Git para firmar automáticamente todos los 						commits que realices con la siguiente configuración global:</p>
-					<p>git config --global commit.gpgsign true</p>
-				</li>
-				<li>
-					<p>Ahora, cada vez que realices un commit, Git te pedirá 						la contraseña de tu clave GPG y firmará automáticamente el 						commit.</p>
-				</li>
-				<li>
-				<li>
-					<p>Si también deseas firmar los tags que creas en Git, 						ejecuta el siguiente comando para configurar Git:</p>
-					<p>git config --global tag.gpgsign true</p>
-				</li>
-				<li>
-					<p>A partir de ahora, al crear un tag, Git te pedirá la 						contraseña de tu clave GPG y firmará el tag.</p>
-				</li>
-			</ol>
-
-			<p>¡Y eso es todo! Ahora, tus commits y tags estarán firmados usando tu 				clave GPG. Esto ayuda a garantizar la integridad y autenticidad de 				tus cambios en Git. </p>
-
-		</details>
-		</li>
-		<li>
-		<details>
-			<summary>
-				Que son las tags,
-			</summary>
-			<p>En Git, un tag es una referencia estática a un punto específico en la 				historia de un repositorio. Se utiliza para marcar versiones importantes o 				hitos en el desarrollo de un proyecto. Los tags son útiles para marcar 				versiones de lanzamiento, versiones estables o cualquier otro estado 				significativo del software.</p>
-
-			<p>Un tag se puede aplicar a un commit específico y se utiliza para 				identificar ese commit de manera más fácil. A diferencia de las ramas 					(branches) en Git, que pueden moverse hacia delante con nuevos 					commits, los tags siempre apuntan a un commit específico y no 					cambian con nuevas confirmaciones.</p>
-
-			<p>Los tags son útiles para realizar seguimiento de las versiones de 				lanzamiento del software e ir fácilmente a un punto específico en la 				historia del repositorio. Se muestran en la salida del comando git log y 				se utilizan comúnmente para generar lanzamientos o identificar commits 				importantes en el desarrollo de un proyecto.</p>
-
+			<summary>Qué son las tags,</summary>
+			<p>En Git, un tag es una referencia estática a un punto específico en la historia de un repositorio. Se utiliza para marcar versiones importantes o hitos en el desarrollo de un proyecto. Los tags son útiles para marcar versiones de lanzamiento, versiones estables o cualquier otro estado significativo del software.</p>
+			<p>Un tag se puede aplicar a un commit específico y se utiliza para identificar ese commit de manera más fácil. A diferencia de las ramas (branches) en Git, que pueden moverse hacia delante con nuevos commits, los tags siempre apuntan a un commit específico y no cambian con nuevas confirmaciones.</p>
+			<p>Los tags son útiles para realizar seguimiento de las versiones de lanzamiento del software e ir fácilmente a un punto específico en la historia del repositorio. Se muestran en la salida del comando git log y 				se utilizan comúnmente para generar lanzamientos o identificar commits importantes en el desarrollo de un proyecto.</p>
 			<p>Para crear un tag en Git, se usa el siguiente comando:</p>
 			<p>git tag -a NOMBRE_DEL_TAG -m "Mensaje del tag" COMMIT</p>
-			<p>Reemplaza NOMBRE_DEL_TAG con el nombre que quieras asignar al tag, 				"Mensaje del tag" por un mensaje descriptivo y COMMIT por el identificador 				del commit al que deseas aplicar el tag.</p>
-
-			<p>Para ver los tags existentes en un repositorio, puedes utilizar el 				comando git tag, y para ver más detalles sobre un tag específico, puedes 				usar git show NOMBRE_DEL_TAG. También puedes encontrar tags específicos
-				utilizando el comando git log --tags.</p>
-
-			<p>En resumen, un tag en Git es una referencia inmutable a un punto 				específico en la historia del repositorio, como una versión de lanzamiento 				o un estado importante del proyecto.</p>
-
-		</details>
+			<p>Reemplaza NOMBRE_DEL_TAG con el nombre que quieras asignar al tag, "Mensaje del tag" por un mensaje descriptivo y COMMIT por el identificador del commit al que deseas aplicar el tag.</p>
+			<p>Para ver los tags existentes en un repositorio, puedes utilizar el comando git tag, y para ver más detalles sobre un tag específico, puedes usar git show NOMBRE_DEL_TAG. También puedes encontrar tags específicos utilizando el comando git log --tags.</p>
+			<p>En resumen, un tag en Git es una referencia inmutable a un punto específico en la historia del repositorio, como una versión de lanzamiento o un estado importante del proyecto.</p>
+			<details>
+				<summary><h3>Cómo asignar un tag a un commit?</h3></summary>
+					<p>Para asignar un tag a un commit en Git, puedes seguir los siguientes pasos:</p>
+					<ol>
+						<li> <p>Verifica los commits disponibles escribiendo el comando git log en tu consola. Esto mostrará una lista de commits con sus respectivos 							identificadores.</p></li>
+	<li> <p>Identifica el commit al que deseas asignar un tag y copia su identificador.</p></li>
+						<li> <p>Utiliza el comando git tag, seguido del nombre 							del tag y el identificador del commit. Por ejemplo, si deseas asignar un tag llamado "v1.0" 							al commit con identificador "abcd1234", ejecuta el siguiente <comando:<br>git tag v1.0 abcd1234</p></li>
+						<li> <p>Verifica que el tag ha sido creado correctamente mediante el comando git tag. Esto mostrará una lista de todos los tags existentes en el repositorio.</p></li>
+						<li> <p>(Opcional) Si deseas enviar este tag al repositorio remoto, utiliza el comando git push origin <tagname>. Por ejemplo, en nuestro caso sería git push origin v1.0.</p></li>
+					</ol>
+					<p>Con estos pasos, habrás asignado un tag a un commit específico en Git. </p>
+			</details>	
 		</li>
+	</details>
 		<li>
 		<details>
-			<summary>
-				<p>como asignar un tag a un commit,</p>
-			</summary>
-				<p>Para asignar un tag a un commit en Git, puedes seguir los 					siguientes pasos:</p>
-				<ol>
-					<li>
-						<p>Verifica los commits disponibles escribiendo el 							comando git log en tu consola. Esto mostrará una 							lista de commits con sus respectivos 							identificadores.</p>
-					</li>
-<li>					
-						<p>Identifica el commit al que deseas asignar un 							tag y copia su identificador.</p>
-					</li>
-					<li>
-						<p>Utiliza el comando git tag, seguido del nombre 							del tag y el identificador del commit. Por 							ejemplo, si deseas asignar un tag llamado "v1.0" 							al commit con identificador "abcd1234", ejecuta el 							siguiente comando:git tag v1.0 abcd1234</p>
-					</li>
-					<li>
-						<p>Verifica que el tag ha sido creado 							correctamente mediante el comando git tag. Esto 							mostrará una lista de todos los tags 							existentes en el repositorio.</p>
-					</li>
-					<li>
-						<p>(Opcional) Si deseas enviar este tag al 							repositorio remoto, utiliza el comando git push 							origin <tagname>. Por ejemplo, en nuestro 							caso sería git push origin v1.0.</p>
-					</li>
-				</ol>
-				<p>Con estos pasos, habrás asignado un tag a un commit específico 					en Git. </p>
-
-		</details>
-		</li>
-		<li>
-		<details>
-			<summary>
-				<p>Que son las ramas</p>
-			</summary>
-			<p>En Git, una rama (branch en inglés) es una línea de desarrollo 				independiente que permite realizar cambios y experimentos sin afectar al 				código base o a otras ramas. Una rama puede ser considerada como una 				versión paralela del código en un momento determinado.</p>
-
-				<p>Cada proyecto de Git comienza con una rama principal llamada 					"master" o "main", que es la línea de desarrollo 					principal. A medida que trabajas en el proyecto, puedes crear 					nuevas ramas para realizar cambios separados o trabajar en nuevas 					funcionalidades, sin afectar la rama principal.</p>
-
+			<summary>Que son las ramas,</summary>
+			<p>En Git, una rama (branch en inglés) es una línea de desarrollo independiente que permite realizar cambios y experimentos sin afectar al código base o a otras ramas. Una rama puede ser considerada como una versión paralela del código en un momento determinado.</p>
+				<p>Cada proyecto de Git comienza con una rama principal llamada "master" o "main", que es la línea de desarrollo principal. A medida que trabajas en el proyecto, puedes crear nuevas ramas para realizar cambios separados o trabajar en nuevas funcionalidades, sin afectar la rama principal.</p>
 				<p>Las ramas son útiles para diferentes propósitos, como:</p>
 				<ol>
-					<li>
-						<p>Desarrollar nuevas características o solucionar 							problemas: Puedes crear una rama para enfocarte en 							un cambio específico sin afectar la rama 							principal. Una vez que el cambio esté completo y 							probado, puedes fusionar la rama con la rama 							principal.</p>
-					</li>
-					<li>
-						<p>Trabajo en equipo: Cuando varias personas 							colaboran en un proyecto, cada una puede crear su 							propia rama para trabajar en su parte del código. 							Luego, pueden fusionar sus ramas individualmente o 							en conjunto.</p>
-					</li>
-					<li>
-						<p>Versiones de lanzamiento o mantenimiento: 							Puedes crear ramas específicas para manejar 							cambios relacionados con una versión en particular 							o para corregir errores en versiones anteriores 							sin afectar el código principal.</p>
-					</li>
+					<li> <p>Desarrollar nuevas características o solucionar problemas. Puedes crear una rama para enfocarte en un cambio específico sin afectar la rama principal. Una vez que el cambio esté completo y 							probado, puedes fusionar la rama con la rama principal.</p></li>
+					<li> <p>Trabajo en equipo: Cuando varias personas colaboran en un proyecto, cada una puede crear su propia rama para trabajar en su parte del código. Luego, pueden fusionar sus ramas individualmente o en conjunto.</p></li>
+					<li> <p>Versiones de lanzamiento o mantenimiento: Puedes crear ramas específicas para manejar cambios relacionados con una versión en particular o para corregir errores en versiones anteriores sin afectar el código principal.</p></li>
 				</ol>
-			<p>Una vez que creas una rama, puedes cambiar a ella utilizando el comando 				git checkout. Para crear una nueva rama, puedes utilizar el comando git 				branch <nombre-de-rama>. Git te permite alternar entre distintas 				ramas, fusionar ramas, eliminar ramas y gestionar todo el historial de 				cambios de manera independiente para cada rama.</p>
-
-		</details>
+			<p>Una vez que creas una rama, puedes cambiar a ella utilizando el comando git checkout <nombre_de_rama>. Para crear una nueva rama, puedes utilizar el comando git branch <nombre_de_rama>. Git te permite alternar entre distintas ramas, fusionar ramas, eliminar ramas y gestionar todo el historial de cambios de manera independiente para cada rama.</p>
+				<details>
+					<summary><h3>¿Cómo crear ramas</h3></summary>
+					<p>Para crear una rama en Git, puedes seguir los siguientes pasos:</p>
+						<ol>
+							<li> <p>Asegúrate de estar en la rama principal del proyecto. Puedes verificarlo utilizando el comando git branch, que mostrará todas las ramas existentes y resaltará la rama actual con un asterisco(*).</p>
+		---
+		$ git branch
+		  master
+		* main
+		---</li>
+							<li> <p>Si no estás en la rama principal, cambia a ella utilizando el comando git checkout <nombre_de_rama> y reemplaza <nombre_de_rama> con el nombre de la rama principal (por ejemplo, "master" o "main").</p>
+		---
+		$ git checkout main
+		---</li>
+							<li> <p>Una vez en la rama principal, puedes crear una nueva rama utilizando el comando git branch <nombre_de_nueva_rama> y reemplazar <nombre_de_nueva_rama> con el nombre que desees darle a la nueva rama.</p>
+		---
+		$ git branch nueva-rama
+		---</li>
+							<li> <p>Verifica que se haya creado correctamente la nueva rama utilizando el comando git branch.</p>
+		---
+		$ git branch
+		  master
+		* main
+		  nueva_rama
+		---</li>
+						</ol>
+						<p>Ahora, has creado una nueva rama llamada "nueva_rama". Puedes cambiar a esta rama utilizando el comando git checkout nueva_rama y comenzar a trabajar en ella. Los cambios realizados en esta rama no afectarán a la rama principal ni a 				otras ramas hasta que sean fusionados.</p>
+				</details>
 		</li>
-		<li>
-		<details>
-			<summary>
-				<p>como crear ramas</p>
-			</summary>
-			<p>Para crear una rama en Git, puedes seguir los siguientes pasos:</p>
-				<ol>
-					<li>
-						<p>Asegúrate de estar en la rama principal del 							proyecto. Puedes verificarlo utilizando el comando 							git branch, que mostrará todas las ramas 							existentes y resaltará la rama actual con un 							asterisco.</p>
----
-$ git branch
-  master
-* main
----
-					</li>
-					<li>
-						<p>Si no estás en la rama principal, cambia a ella 							utilizando el comando git checkout <nombre-de-							rama>. Reemplaza <nombre-de-rama> con el nombre de la rama principal (por ejemplo, "master" o "main").</p>
----
-$ git checkout main
----
-					</li>
-					<li>
-						<p>Una vez en la rama principal, puedes crear una nueva rama utilizando el comando git branch <nombre-de-nueva-rama>. Reemplaza <nombre-de-nueva-rama> con el nombre que desees darle a la nueva rama.</p>
----
-$ git branch nueva-rama
----
-					</li>
-					<li>
-						Verifica que se haya creado correctamente la nueva 						rama utilizando el comando git branch.</p>
----
-$ git branch
-  master
-* main
-  nueva-rama
----
-					</li>
-				</ol>
-<br><br>
-Ahora, has creado una nueva rama llamada "nueva-rama". Puedes cambiar a esta rama utilizando el 			<p>comando git checkout nueva-rama y comenzar a trabajar en ella. Los 				cambios realizados en esta rama no afectarán a la rama principal ni a 				otras ramas hasta que sean fusionados.</p>
-
-		</details>
-		</li>
+	</details>
 	</ol>
-
 	<details>
-		<summary>
-			<h2>Comandos utilizados en clase.</h2>
-		</summary>
+		<summary><h2>Comandos utilizados en clase.</h2></summary>
 		<dl>
 			<dt>gpg --full-generate-key</dt>
 			<dd>Inicia la creación de una clave gpg</dd>
@@ -259,14 +155,11 @@ Ahora, has creado una nueva rama llamada "nueva-rama". Puedes cambiar a esta ram
 			<dd>Muestra las ramas disponibles en un repositorio, la rama actual se marca con un símbolo *</dd>
 			<dt>git branch NombreRama</dt>
 			<dd>Crea una rama con el nombre indicado</dd>
-
 		</dl>
 	</details>
 
 	<details>
-		<summary>
-			<h2>Grabación de la clase:</h2>
-		</summary>
+		<summary><h2>Grabación de la clase:</h2></summary>
 		<iframe src="https://drive.google.com/file/d/1vFthhVXPKgCQzwJI_uWN3T_G30s7569-/preview" width="640" height="480"
 			allow="autoplay"></iframe>
 		<p>Enlace a la grabación si lo prefieres <a
