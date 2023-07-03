@@ -137,13 +137,33 @@
 
 		</details>
 		</li>
+		<li>
 		<details>
 			<summary>
-				<li>como asignar un tag a un commit,</li>
+				<p>como asignar un tag a un commit,</p>
 			</summary>
+				<p>Para asignar un tag a un commit en Git, puedes seguir los 					siguientes pasos:</p>
+				<ol>
+					<li>
+						<p>Verifica los commits disponibles escribiendo el 							comando git log en tu consola. Esto mostrará una 							lista de commits con sus respectivos 							identificadores.</p>
+					</li>
+<li>					
+						<p>Identifica el commit al que deseas asignar un 							tag y copia su identificador.</p>
+					</li>
+					<li>
+						<p>Utiliza el comando git tag, seguido del nombre 							del tag y el identificador del commit. Por 							ejemplo, si deseas asignar un tag llamado "v1.0" 							al commit con identificador "abcd1234", ejecuta el 							siguiente comando:git tag v1.0 abcd1234</p>
+					</li>
+					<li>
+						<p>Verifica que el tag ha sido creado 							correctamente mediante el comando git tag. Esto 							mostrará una lista de todos los tags 							existentes en el repositorio.</p>
+					</li>
+					<li>
+						<p>(Opcional) Si deseas enviar este tag al 							repositorio remoto, utiliza el comando git push 							origin <tagname>. Por ejemplo, en nuestro 							caso sería git push origin v1.0.</p>
+					</li>
+				</ol>
+				<p>Con estos pasos, habrás asignado un tag a un commit específico 					en Git. </p>
 
 		</details>
-
+		</li>
 		<details>
 			<summary>
 				<li>Que son las ramas</li>
