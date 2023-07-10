@@ -62,8 +62,23 @@
 			<sumary>
 				<p>Cómo recuperar el stash con apply y pop,</p>
 			</sumary>
-				<h2>Cómo recuperar el stash con apply y pop</h2>
-				</li>
+				<h2>Cómo recuperar el stash con apply y 					pop</h2>
+				<p>Para recuperar los cambios guardados en 					el stash utilizando los comandos "apply" y 					"pop" en Git, puedes seguir estos pasos:</p>
+					<ul>
+					<li>
+					<p>Verifica el stash actual disponible 					en tu repositorio Git utilizando el 					comando git stash list. Esto te 						mostrará una lista de todos los 						stashes que has creado en tu 						repositorio.</p>
+					</li>
+					<li>
+						<p>Si deseas aplicar los cambios 							de un stash específico pero 							mantenerlo almacenado en el 							stash, utiliza el comando git stash apply stash@{n}, donde "n" es el número del stash 						que deseas aplicar. Por ejemplo, si deseas aplicar los cambios del segundo stash, utilizarías git stash apply stash@{1}.</p>
+					</li>
+					<li>
+<p>Si deseas aplicar los cambios de un stash específico y eliminarlo del stash, puedes usar el comando git stash pop stash@{n}. Esto aplicará los cambios del stash seleccionado y lo eliminará del stash. Por ejemplo, para aplicar y eliminar el segundo stash, puedes utilizar git stash pop stash@{1}.</p>
+					</li>
+				</ul>
+<p>Recuerda que al aplicar o hacer un "pop" del stash, los cambios se aplicarán a tu rama actual. Asegúrate de estar en la rama correcta antes de ejecutar estos comandos. </p>
+				
+		</details>
+		</li>
 		<li>Cómo borrar elementos del stash.</li>
 		<li>Cómo limpiar el stash.</li>
 		<li>Como trabajar con ramas.</li>
