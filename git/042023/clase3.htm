@@ -79,7 +79,23 @@
 				
 		</details>
 		</li>
-		<li>Cómo borrar elementos del stash.</li>
+		<li>
+		<details>
+		<sumary>
+			Cómo borrar elementos del stash.
+		</sumary>
+		<h2>Cómo borrar elementos del stash</h2>
+			>p>Para borrar elementos de un stash en Git, 				puedes utilizar el comando "drop". Aquí tienes 				los pasos a seguir:</p>
+			<ul>
+				<li><p>Verifica el stash actual disponible 					en tu repositorio Git utilizando el 					comando git stash list. Esto te 					mostrará una lista de todos los 					stashes que has creado en tu 					repositorio.</p></li>
+
+				<li><p>Identifica el número del stash que 					deseas borrar de la lista.</p></li>
+
+				<li><p>Utiliza el comando git stash drop 					stash@{n}, donde "n" es el número del 						stash que deseas eliminar. Por 					ejemplo, si deseas borrar el segundo 					stash, utilizarías git stash drop 					stash@{1}.</p></li>
+			</ul>
+			<p>Ten en cuenta que al usar el comando 				"drop", el stash seleccionado se borrará 				permanentemente y no se podrá recuperar. 				Asegúrate de verificar cuidadosamente qué 				stash deseas eliminar antes de ejecutar este 				comando.</p>
+		</details>
+		</li>
 		<li>Cómo limpiar el stash.</li>
 		<li>Como trabajar con ramas.</li>
 		<li>Cómo eliminar ramas.</li>
