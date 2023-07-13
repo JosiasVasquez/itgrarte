@@ -59,9 +59,9 @@
 		</details></li>
 		<li>
 		<details>
-			<sumary>
+			<summary>
 				<p>Cómo recuperar el stash con apply y pop,</p>
-			</sumary>
+			</summary>
 				<h2>Cómo recuperar el stash con apply y 					pop</h2>
 				<p>Para recuperar los cambios guardados en 					el stash utilizando los comandos "apply" y 					"pop" en Git, puedes seguir estos pasos:</p>
 					<ul>
@@ -81,9 +81,9 @@
 		</li>
 		<li>
 		<details>
-		<sumary>
+		<summary>
 			Cómo borrar elementos del stash.
-		</sumary>
+		</summary>
 		<h2>Cómo borrar elementos del stash</h2>
 			>p>Para borrar elementos de un stash en Git, 				puedes utilizar el comando "drop". Aquí tienes 				los pasos a seguir:</p>
 			<ul>
@@ -98,9 +98,9 @@
 		</li>
 		<li>
 		<details>
-		<sumary>
+		<summary>
 			Cómo limpiar el stash.
-		</sumary>
+		</summary>
 		<h2>Cómo limpiar el stash.</h2>
 			<p>Para limpiar completamente el stash y eliminar todos los stashes guardados, puedes utilizar el comando "clear" en lugar de "drop". Aquí tienes los pasos a seguir:</p>
 			<ul>
@@ -115,9 +115,9 @@
 		</li>
 		<li>
 		<details>
-		<sumary>
+		<summary>
 		Como trabajar con ramas.
-		</sumary>
+		</summary>
 		<h2>Como trabajar con ramas</h2>
 			<p>Trabajar con ramas en Git es una práctica común y útil para organizar y desarrollar características o correcciones de manera independiente. Aquí hay algunos pasos básicos para trabajar con ramas:</p>
 			<ul>
@@ -136,7 +136,27 @@
 <p>Estos son solo algunos de los comandos más comunes para trabajar con ramas en Git. Puedes explorar otras funcionalidades y opciones para administrar las ramas, como renombrar una rama o fusionar ramas de forma más avanzada, consultando la documentación oficial de Git.</p>
 		</details>
 		</li>
-		<li>Cómo eliminar ramas.</li>
+		<li>
+		<details>
+		<summary>
+		Cómo eliminar ramas.
+		</summary>
+		<h2>Cómo eliminar ramas</h2>
+		<p>Para eliminar una rama en Git, puedes seguir los siguientes pasos:</p>
+			<ul>
+<li><p>Asegúrate de no estar en la rama que deseas eliminar. Puedes cambiar de rama utilizando el comando git checkout nombre-de-la-rama para cambiar a otra rama existente.</p></li>
+
+<li><p>Puedes verificar la lista de ramas disponibles utilizando el comando git branch.</p></li>
+
+<li><p>Una vez que estés en una rama diferente a la que deseas eliminar, ejecuta el comando git branch -d nombre-de-la-rama para eliminar la rama. Por ejemplo, si quieres eliminar la rama "nueva-funcionalidad", ejecuta git branch -d nueva-funcionalidad.</p></li>
+
+<li><p>Si hubo commits sin fusionar en la rama que intentas eliminar, Git te mostrará un mensaje de advertencia. Puedes forzar la eliminación de la rama utilizando el comando git branch -D nombre-de-la-rama. Ten en cuenta que esto eliminará cualquier trabajo que no esté fusionado en la rama.</p></li>
+			</ul>
+<p>Recuerda que una vez que eliminas una rama, no se puede recuperar a menos que hayas realizado una copia de seguridad previamente. Si tienes dudas sobre si eliminar una rama o no, siempre es recomendable crear una copia de seguridad antes de hacerlo.</p>
+
+<p>Es importante destacar que eliminar una rama no afectará a la rama principal (generalmente llamada "master" o "main"). La rama eliminada simplemente dejará de existir, pero el historial de commits estará presente.</p>
+		</details>
+		</li>
 		<li>Como combinar ramas,</li>
 		<li>Como cambiar la base de una rama.</li>
 		<li>Solucionar errores de combinación de ramas.</li>
