@@ -157,7 +157,29 @@
 <p>Es importante destacar que eliminar una rama no afectará a la rama principal (generalmente llamada "master" o "main"). La rama eliminada simplemente dejará de existir, pero el historial de commits estará presente.</p>
 		</details>
 		</li>
-		<li>Como combinar ramas,</li>
+		<li>
+		<details>
+		<summary>
+		Como combinar ramas,
+		</summary>
+		<h2>Como combinar ramas</h2>
+		<p>Para combinar ramas en Git, puedes seguir los siguientes pasos:</p>
+			<ul>
+<li><p>Asegúrate de estar en la rama en la que deseas incorporar los cambios de otra rama. Puedes cambiar de rama utilizando el comando git checkout nombre-de-la-rama.</p></li>
+
+<li><p>Ejecuta el comando git merge nombre-de-la-rama-a-combinar. Por ejemplo, si deseas combinar la rama "nueva-funcionalidad" con la rama en la que te encuentras, ejecuta git merge nueva-funcionalidad.</p></li>
+
+<li><p>Git intentará automáticamente fusionar los cambios de la rama especificada con la rama actual. Si no hay conflictos, Git realizará la fusión automáticamente y mostrará un mensaje indicando que la fusión fue exitosa.</p></li>
+
+<li><p>Si hay conflictos, Git te mostrará un mensaje indicando los archivos con conflictos. Debes resolver los conflictos manualmente editando los archivos en conflicto y eliminando las marcas de conflictos. Después, debes ejecutar el comando git add nombre-del-archivo-modificado para marcar los conflictos como resueltos. Una vez que hayas resuelto todos los conflictos, puedes ejecutar git merge --continue para completar la fusión.</p></li>
+
+<li><p>Una vez que hayas completado la fusión correctamente, puedes eliminar la rama que ya has combinado utilizando el comando git branch -d nombre-de-la-rama-a-combinar. Sin embargo, ten en cuenta que esto solo se puede hacer si no necesitas conservar otra referencia a esa rama.</p></li>
+			</ul>
+<p>Recuerda que durante el proceso de fusión puedes utilizar comandos como git status o git diff para ver el estado de los archivos y los cambios realizados.</p>
+
+<p>Es importante tener en cuenta que siempre es recomendable realizar una copia de seguridad o trabajar en una rama separada antes de combinar ramas, especialmente si los cambios son importantes o si la fusión puede afectar el código existente de manera significativa.</p>
+		</details>
+		</li>
 		<li>Como cambiar la base de una rama.</li>
 		<li>Solucionar errores de combinación de ramas.</li>
 		<li>Limpiar archivos sin seguimiento del repositorio</li>
