@@ -113,7 +113,29 @@
 <p>Recuerda tener cuidado al utilizar el comando "clear" ya que eliminará todos los stashes de tu repositorio sin posibilidad de recuperación. Asegúrate de hacer una copia de seguridad de los cambios importantes antes de utilizar este comando. </p>
 		</details>
 		</li>
-		<li>Como trabajar con ramas.</li>
+		<li>
+		<details>
+		<sumary>
+		Como trabajar con ramas.
+		</sumary>
+		<h2>Como trabajar con ramas</h2>
+			<p>Trabajar con ramas en Git es una práctica común y útil para organizar y desarrollar características o correcciones de manera independiente. Aquí hay algunos pasos básicos para trabajar con ramas:</p>
+			<ul>
+				<li><p>Crear una nueva rama: Puedes crear una nueva rama utilizando el comando git branch nombre-de-la-rama. Por ejemplo, si quieres crear una rama llamada "nueva-funcionalidad", ejecuta git branch nueva-funcionalidad. Esto creará una nueva rama basada en la rama actual en la que te encuentres.</p></li>
+
+<li><p>Cambiar a una rama existente: Puedes cambiar a una rama existente utilizando el comando git checkout nombre-de-la-rama. Por ejemplo, si quieres cambiar a la rama "nueva-funcionalidad", ejecuta git checkout nueva-funcionalidad. Esto cambiará tu entorno de trabajo a la rama especificada.</p></li>
+
+<li><p>Realizar cambios en la rama: Trabaja en la rama seleccionada realizando los cambios necesarios en tus archivos.</p></li>
+
+<li><p>Agregar y confirmar los cambios: Utiliza los comandos git add <archivo> y git commit -m "mensaje del commit" para agregar y confirmar los cambios en la rama actual.</p></li>
+
+<li><p>Fusionar ramas: Una vez que hayas completado los cambios en la rama y quieres integrar esos cambios en otra rama, puedes utilizar el comando git merge. Cambia a la rama objetivo (la que quieres fusionar) utilizando git checkout nombre-de-la-rama-objetivo. Luego, ejecuta git merge nombre-de-la-rama para fusionar la rama actual con la rama objetivo.</p></li>
+
+<li><p>Eliminar una rama: Si ya no necesitas una rama, puedes eliminarla utilizando el comando git branch -d nombre-de-la-rama. Por ejemplo, para eliminar la rama "nueva-funcionalidad", ejecuta git branch -d nueva-funcionalidad. Ten en cuenta que no puedes eliminar la rama en la que te encuentras actualmente.</p></li>
+			</ul>
+<p>Estos son solo algunos de los comandos más comunes para trabajar con ramas en Git. Puedes explorar otras funcionalidades y opciones para administrar las ramas, como renombrar una rama o fusionar ramas de forma más avanzada, consultando la documentación oficial de Git.</p>
+		</details>
+		</li>
 		<li>Cómo eliminar ramas.</li>
 		<li>Como combinar ramas,</li>
 		<li>Como cambiar la base de una rama.</li>
