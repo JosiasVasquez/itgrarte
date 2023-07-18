@@ -233,7 +233,26 @@
 <p>Recuerda que la resolución de conflictos es un proceso manual y requiere tomar decisiones sobre qué cambios deseas conservar. Es importante comunicarse y colaborar con otros colaboradores si estás fusionando ramas compartidas en un proyecto de equipo. </p>
 		</details>
 		</li>
-		<li>Limpiar archivos sin seguimiento del repositorio</li>
+		<li>
+		<details>
+		<summary>
+		Limpiar archivos sin seguimiento del repositorio.
+		</summary>
+		<h2>Limpiar archivos sin seguimiento del repositorio</h2>
+		<p>Para limpiar los archivos sin seguimiento en un repositorio Git, puedes seguir estos pasos:</p>
+		<ul>
+<li><p>Asegúrate de guardar cualquier cambio o modificación que hayas realizado en tus archivos rastreados. Puedes utilizar git stash para guardar temporalmente tus cambios si no deseas confirmarlos aún.</p></li>
+
+<li><p>Ejecuta el comando git clean -n para obtener una vista previa de los archivos que se eliminarán. Esto mostrará una lista de los archivos no rastreados que están actualmente presentes en el repositorio.</p></li>
+
+<li><p>Verifica cuidadosamente la lista de archivos que se enumeran en el paso anterior. Asegúrate de que los archivos enumerados sean realmente los que deseas eliminar. Si hay archivos que no deseas eliminar, asegúrate de agregarlos al archivo .gitignore para evitar que se rastreen en el futuro.</p></li>
+
+<li><p>Una vez que estés seguro de los archivos que deseas eliminar, ejecuta el comando git clean -f para eliminar los archivos sin seguimiento de forma permanente.</p></li>
+		</ul>
+<p>Recuerda que esta operación es irreversible, por lo que es importante verificar dos veces la lista de archivos antes de ejecutar el comando `git clean -f`.
+Además, el comando `git clean` eliminará solo archivos sin seguimiento, no afectará los archivos rastreados ni los cambios en las ramas y commits existentes. </p>
+		</details>
+		</li>
 		<li>Como configurar el archivo .gitignore</li>
 	</ol>
 
