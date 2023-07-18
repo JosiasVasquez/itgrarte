@@ -180,7 +180,31 @@
 <p>Es importante tener en cuenta que siempre es recomendable realizar una copia de seguridad o trabajar en una rama separada antes de combinar ramas, especialmente si los cambios son importantes o si la fusión puede afectar el código existente de manera significativa.</p>
 		</details>
 		</li>
-		<li>Como cambiar la base de una rama.</li>
+		<li>
+		<details>
+		<summary>
+			Como cambiar la base de una rama.
+		</summary>
+		<h2>Como cambiar la base de una rama</h2>
+			<p>Cambiar la base de una rama en Git implica reubicar el punto de inicio de la rama en otro commit. Puedes seguir los siguientes pasos para cambiar la base de una rama:</p>
+		<ul>
+<li><p>Asegúrate de tener un repositorio Git en tu sistema local y de estar en la rama que deseas modificar.<up></li>
+
+<li><p>Crea una nueva rama temporal (por ejemplo, "nueva-base") desde la rama a la cual deseas cambiar su base. Esto se hace para evitar perder cambios en caso de que algo salga mal durante el proceso. Puedes crear la rama temporal ejecutando el siguiente comando: git branch nueva-base.</p></li>
+
+<li><p>Cambia a la nueva rama temporal que has creado utilizando el comando git checkout nueva-base.</p></li>
+
+<li><p>Utiliza el comando git rebase --onto nombre-de-la-rama-nueva nombre-del-commit-inicial nombre-de-la-rama-a-modificar. Esto indica a Git que tome todos los commits desde el commit inicial especificado hasta el HEAD de la rama a modificar y los coloque en la nueva rama especificada. Por ejemplo, si deseas cambiar la base de la rama "rama-a-modificar" a la rama "rama-nueva" a partir del commit "commit-inicial", ejecuta el siguiente comando: git rebase --onto rama-nueva commit-inicial rama-a-modificar.</p></li>
+
+<li><p>Git realizará el rebasing y reubicará los cambios de la rama a modificar sobre la nueva base. Si hay conflictos, Git te los mostrará y deberás resolverlos manualmente siguiendo las instrucciones que te brinda Git. Puedes editar los archivos en conflicto y luego utilizar el comando git add nombre-del-archivo-modificado para marcar los conflictos como resueltos. Después, ejecuta git rebase --continue para continuar con el proceso de rebasing.</p></li>
+
+<li><p>Una vez completado el rebasing sin conflictos, la rama a modificar ahora tiene una nueva base. Puedes verificar esto revisando el historial de commits y asegurándote de que se hayan aplicado correctamente los cambios.</p></li>
+
+<li><p>Si necesitas eliminar la rama temporal que se creó en el paso 2 (por ejemplo, "nueva-base"), puedes utilizar el comando git branch -d nueva-base.</p></li>
+
+<p>Recuerda que cambiar la base de una rama es una operación que modifica el historial de los commits y, por lo tanto, puede tener un impacto en el trabajo de otros colaboradores. Se recomienda comunicar y coordinar estos cambios con el equipo antes de realizarlos.</p>
+		</details>
+		</li>
 		<li>Solucionar errores de combinación de ramas.</li>
 		<li>Limpiar archivos sin seguimiento del repositorio</li>
 		<li>Como configurar el archivo .gitignore</li>
