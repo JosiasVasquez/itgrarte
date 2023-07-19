@@ -253,7 +253,44 @@
 Además, el comando `git clean` eliminará solo archivos sin seguimiento, no afectará los archivos rastreados ni los cambios en las ramas y commits existentes. </p>
 		</details>
 		</li>
-		<li>Como configurar el archivo .gitignore</li>
+		<li>
+		<details>
+		<summary>
+		Como configurar el archivo .gitignore
+		</summary>
+		<h2>Como configurar el archivo .gitignore</h2>
+		<p>Para configurar el archivo .gitignore, sigue los siguientes pasos:</p>
+		ul>
+<li><p>Abre un editor de texto en el directorio raíz de tu repositorio Git.</p></li>
+
+<li><p>Crea un nuevo archivo y nómbralo ".gitignore" (sin las comillas y asegúrate de que no tenga extensión de archivo como .txt).</p></li>
+
+<li><p>Abre el archivo .gitignore en el editor de texto.</p></li>
+
+<li><p>Escribe las reglas que especifican los archivos y directorios que deseas ignorar. Cada regla debe estar en una nueva línea. Por ejemplo:</p>
+
+   
+  <p> # Ignorar todos los archivos con extensión .log</p>
+  <p> *.log</p>
+  
+  <p> # Ignorar el directorio "node_modules" y su contenido</p>
+  <p> node_modules/</p>
+  
+ <p>  # Ignorar el archivo "config.ini"</p>
+ <p>  config.ini</p>
+   ```
+
+   <p>En el ejemplo anterior, hemos incluido algunas reglas típicas para ignorar archivos y directorios comunes en diferentes lenguajes de programación y frameworks.</p></li>
+
+<li><p>Guarda y cierra el archivo .gitignore.</p></li>
+
+<li><p>Ejecuta el comando git status para ver los cambios realizados en el archivo .gitignore.</p></li>
+
+<p>   Verás que los archivos y directorios que coincidan con las reglas del archivo .gitignore ahora aparecen como "untracked" (no rastreados) y ya no se mostrarán en la lista de cambios pendientes.</p></li>
+		</ul>
+<p>Recuerda que el archivo .gitignore se puede personalizar según tus necesidades. Puedes agregar reglas adicionales y modificar las existentes en cualquier momento para adaptarse a tu proyecto. </p>
+		</details>
+		</li>
 	</ol>
 
 	<details><summary>
