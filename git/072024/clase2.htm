@@ -6,8 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Segunda sesión curso control de versiones colaborativo con git y github</title>
 	<meta name="title" content="Segunda sesión curso control de versiones colaborativo con git y github">
-	<meta name="description"
-		content="Segunda seción del curso control de versiones con git y github de fundación itgrarte, impartido por Josias Vásquez. Temas vistos, comandos utilizados, notas, explicación de la tarea; grabación de la clase incrustada y enlace de drive.">
+	<meta name="description" content="Segunda seción del curso control de versiones con git y github de fundación itgrarte, impartido por Josias Vásquez. Temas vistos, comandos utilizados, notas, explicación de la tarea; grabación de la clase incrustada y enlace de drive.">
 	<meta name="keywords" content="curso,git,github,itgrarte,Josias Vásquez">
 	<meta name="robots" content="index, follow">
 	<meta name="language" content="Spanish">
@@ -15,7 +14,123 @@
 </head>
 <body>
 	<h1>Segunda sesión curso de control de versiones con git y github:</h1>
-	<p>🚧📚 Este contenido todavía no está disponible. Vuelve luego de recibir esta clase y encontrarás todo lo que necesita ¡Nos vemos pronto! ✨🙌</p>
+	<h2>Temas vistos en la sesión:</h2>
+	<ol>
+		<li>Repaso de la sesión anterior:</li>
+		<li>
+			<details>
+				<summary>Qué son las ramas</summary>
+				<p>Las ramas en Git permiten trabajar en diferentes líneas de desarrollo de un proyecto de forma paralela.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Cómo ver las ramas de un proyecto</summary>
+				<p>Comando <code>git branch</code> para listar todas las ramas del repositorio.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Cómo crear una rama</summary>
+				<p>Comando <code>git branch nombre_rama</code> para crear una nueva rama.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Cómo crear una rama y cambiar a ella</summary>
+				<p>Comando <code>git checkout -b nombre_rama</code> para crear una nueva rama y cambiar a ella.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Cómo cambiar entre ramas con switch y checkout</summary>
+				<p>Usar <code>git switch nombre_rama</code> o <code>git checkout nombre_rama</code> para cambiar de rama.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Cómo eliminar una rama</summary>
+				<p>Comando <code>git branch -d nombre_rama</code> para eliminar una rama.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Qué es merge</summary>
+				<p>Operación que combina los cambios de una rama en otra, creando un commit de fusión.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Qué es rebase</summary>
+				<p>Operación que reaplica los commits de la rama actual sobre la rama especificada, moviendo la historia de commit sin crear un commit de fusión.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Qué es una clave GPG</summary>
+				<p>Una clave GPG (GNU Privacy Guard) se utiliza para cifrar y firmar digitalmente los datos y comunicaciones, garantizando la seguridad y autenticidad.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Cómo crear una clave GPG</summary>
+				<p>Proceso de generación de una clave GPG usando el comando <code>gpg --full-generate-key</code>.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Cómo configurar la firma de commits y tags con la clave GPG creada</summary>
+				<p>Configuración en Git para firmar automáticamente los commits y tags con la clave GPG generada, usando comandos de configuración global.</p>
+			</details>
+		</li>
+	</ol>
+	<h2>Comandos utilizados en clase:</h2>
+	<dl>
+		<dt>git branch</dt>
+		<dd>Muestra las ramas disponibles en un repositorio, la rama actual se marca con un símbolo *</dd>
+		<dt>git branch nombre_rama</dt>
+		<dd>Crea una rama con el nombre indicado</dd>
+		<dt>git checkout nombre_rama</dt>
+		<dd>Cambia a la rama especificada</dd>
+		<dt>git switch nombre_rama</dt>
+		<dd>Alternativa a checkout para cambiar de rama</dd>
+		<dt>git branch -d nombre_rama</dt>
+		<dd>Elimina la rama especificada</dd>
+		<dt>git merge nombre_rama</dt>
+		<dd>Combina la rama especificada con la rama actual</dd>
+		<dt>git rebase nombre_rama</dt>
+		<dd>Reaplica los commits de la rama actual sobre la rama especificada, moviendo la historia de commits de la rama actual para quedar a la cabeza de la historia de la rama especificada.</dd>
+		<dt>gpg --full-generate-key</dt>
+		<dd>Inicia la creación de una clave GPG</dd>
+		<dt>gpg --list-secret-keys --keyid-format=long</dt>
+		<dd>Muestra información en la consola de las claves GPG existentes</dd>
+		<dt>gpg --list-secret-keys</dt>
+		<dd>Muestra las claves GPG secretas almacenadas</dd>
+		<dt>git config --global user.signingkey identificador</dt>
+		<dd>Configura la firma global con la clave GPG especificada mediante el identificador</dd>
+	<dt>git config --global commit.gpgsign true</dt>
+		<dd>Configura que siempre se firmen los commits</dd>
+		<dt>git config --global tag.gpgSign true</dt>
+		<dd>Configura que siempre se firmen los tags</dd>
+		<dt>git log --show-signature > log.txt</dt>
+		<dd>Muestra el historial de commits con indicaciones de la firma y guarda la salida en el archivo log.txt</dd>
+	</dl>
+	<h2>Notas:</h2>
+	<p>
+		La diferencia principal entre <strong>merge</strong> y <strong>rebase</strong> se puede resumir en cómo integran los cambios de una rama en otra:
+	</p>
+	<ol>
+		<li><strong>Merge:</strong> Combina los cambios de una rama en otra, creando un commit de fusión.</li>
+		<li><strong>Rebase:</strong> Transfiere los commits de una rama a otra, reaplicándolos sobre la historia de la rama destino sin crear un commit de fusión.</li>
+	</ol>
+	<p>
+		Al hacer <strong>merge</strong> o <strong>rebase</strong>, la rama indicada se combina con la rama en la que estamos trabajando actualmente, la cual se marca con un asterisco (*) al usar el comando <code>git branch</code>.
+	</p>
+	<!--
+	<h2>Grabación de la clase:</h2>
+	<iframe src="https://drive.google.com/file/d/1vFthhVXPKgCQzwJI_uWN3T_G30s7569-/preview" width="640" height="480" allow="autoplay"></iframe>
+	<p>Enlace a la grabación si lo prefieres <a href="https://drive.google.com/file/d/1vFthhVXPKgCQzwJI_uWN3T_G30s7569-/view?usp=sharing">Grabación segunda sesión</a></p>
+	-->
 	<a href="index.htm" role="button">Volver a la portada del curso</a>
 	<footer>
 		<p><small>Josias Vásquez</small></p>
