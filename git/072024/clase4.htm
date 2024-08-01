@@ -9,8 +9,137 @@
 
 <body>
 	<h1>Cuarta sesión curso de control de versiones con git y github:</h1>
-	<p>🚧📚 Este contenido todavía no está disponible. Vuelve luego de recibir esta clase y encontrarás todo lo que necesita ¡Nos vemos pronto! ✨🙌</p>
+	
+	<h2>Temas vistos en la sesión:</h2>
+	<ul>
+		<li>Repaso</li>
+		<li>
+			<details>
+				<summary>Qué es GitHub</summary>
+				<p>GitHub es una plataforma de desarrollo colaborativo de software, donde se pueden alojar proyectos utilizando el sistema de control de versiones Git. Permite la colaboración entre múltiples desarrolladores y la gestión de proyectos de software.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Exploración por la interfaz de GitHub</summary>
+				<p>En esta sección se explora la interfaz de GitHub, entendiendo las distintas secciones y funcionalidades que ofrece la plataforma para la gestión y colaboración en proyectos.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Exploración y edición de perfil en GitHub</summary>
+				<p>Aquí se enseñan las maneras de explorar y editar el perfil del usuario en GitHub, incluyendo cómo agregar información personal, cambiar avatar, y configurar preferencias de cuenta.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Páginas y acciones de los repositorios en GitHub</summary>
+				<ul>
+					<li>Fork - Hacer una copia de un repositorio en la propia cuenta de GitHub.</li>
+					<li>Star - Marcar un repositorio como favorito.</li>
+					<li>Add this repository to a list - Añadir el repositorio a una lista personalizada.</li>
+					<li>Code - Exploración del código fuente del repositorio.</li>
+					<li>Issues - Gestión de incidencias y tareas pendientes.</li>
+					<li>Pull requests - Propuestas de cambios al código.</li>
+					<li>Discussions - Espacio para discusiones y comentarios del proyecto.</li>
+					<li>Actions - Automatización de flujos de trabajo.</li>
+					<li>Wiki - Documentación del proyecto organizada en páginas.</li>
+					<li>Security - Configuración y monitorización de la seguridad del repositorio.</li>
+					<li>Insights - Estadísticas y análisis del repositorio.</li>
+				</ul>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Contenido de la página Code de un repositorio</summary>
+				<p>La pestaña "Code" contiene todo el árbol de directorios del proyecto, archivos, commits recientes, y botones para clonar o descargar el repositorio.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>El archivo readme.md</summary>
+				<p>Un archivo `README.md` proporciona una descripción del proyecto. Es comúnmente utilizado para explicar qué hace el proyecto, cómo configurarlo y ejecutarlo, entre otras cosas.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Qué son las liberaciones (releases)</summary>
+				<p>Las liberaciones o releases son versiones congeladas del proyecto que se pueden descargar. Generalmente se incrementan con cambios significativos y se etiquetan con número de versión.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Como clonar un repositorio por HTTPS y SSH</summary>
+				<p>Clonar un repositorio significa descargar una copia del repositorio remoto a tu máquina local. Se puede hacer usando URLs HTTPS o claves SSH según la configuración de seguridad y preferencias.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Cómo crear una clave SSH</summary>
+				<p>Las claves SSH se crean para habilitar una conexión segura entre las máquinas locales y los servidores. Es una medida de seguridad preferida sobre HTTPS para operaciones de escritura.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Cómo agregar la clave SSH a nuestra cuenta en GitHub</summary>
+				<p>Después de crear una clave SSH, es necesario añadirla a tu cuenta de GitHub para que pueda reconocerla y permitir operaciones de escritura desde tu máquina local.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Cómo agregar la clave GPG a nuestra cuenta en GitHub</summary>
+				<p>Las claves GPG se utilizan para firmar commits, lo que añade una capa de verificación de identidad. Se debe añadir la clave pública GPG a tu cuenta de GitHub.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Cómo agregar colaboradores al repositorio</summary>
+				<p>Agregar colaboradores permite que otras personas tengan acceso de escritura al repositorio, pudiendo generar y aprobar pull requests y trabajar colaborativamente en el proyecto.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Subir cambios del repositorio local al repositorio remoto</summary>
+				<p>Esta acción consiste en enviar los commits realizados en el repositorio local al repositorio remoto usando el comando `git push`.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Actualizar el repositorio local desde el repositorio remoto</summary>
+				<p>Para actualizar el proyecto local con los cambios realizados en el repositorio remoto, se usa el comando `git pull`.</p>
+			</details>
+		</li>
+	</ul>
+
+	<h2>Comandos vistos en la sesión:</h2>
+	<dl>
+		<dt>gpg --export -a "Nombre de Usuario" > public.key</dt>
+		<dd>Este comando exporta la clave pública GPG del usuario especificado a un archivo llamado `public.key`.</dd>
+
+		<dt>ssh-keygen -t ed25519 -C "correo@ejemplo.com"</dt>
+		<dd>Genera una nueva clave SSH utilizando el algoritmo Ed25519. El correo electrónico suele ser usado como comentario para identificar la clave.</dd>
+
+		<dt>ssh git@github.com</dt>
+		<dd>Este comando comprueba la conexión SSH a GitHub. Si la configuración es correcta, debe devolver un mensaje de bienvenida de GitHub.</dd>
+
+		<dt>git clone https://dominio.com/usuario/repositorio.git</dt>
+		<dd>Clona un repositorio de GitHub utilizando la URL HTTPS.</dd>
+
+		<dt>git clone git@github.com:usuario/repositorio</dt>
+		<dd>Clona un repositorio de GitHub utilizando la URL SSH.</dd>
+
+		<dt>git push</dt>
+		<dd>Envía los cambios realizados en el repositorio local al repositorio remoto.</dd>
+
+		<dt>git pull</dt>
+		<dd>Actualiza el repositorio local con los cambios realizados en el remoto.</dd>
+	</dl>
+	
+	<h2>Grabación de la clase:</h2>
+	<iframe src="https://drive.google.com/file/d/18PRnZvJvtUlACvjYmPYUrG3GW2T8SaUO/preview" width="640" height="480" allow="autoplay"></iframe>
+	<p>Este es el enlace a la grabación si lo prefieres <a href="https://drive.google.com/file/d/18PRnZvJvtUlACvjYmPYUrG3GW2T8SaUO/view?usp=sharing">Grabación cuarta sesión.</a></p>
 	<a href="index.htm" role="button">Volver a la portada del curso</a>
+
 	<footer>
 		<p><small>Josias Vásquez</small></p>
 		<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia Creative Commons"
