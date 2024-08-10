@@ -1,3 +1,0 @@
-Para probar firmas
-modificaciones realizadas para probar push
-esta es una mudifacion para probar el pull
