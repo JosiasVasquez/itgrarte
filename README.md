@@ -3,6 +3,14 @@
 
 En este repositorio encuentras los recursos utilizados en los cursos que imparto con fundación itgrarte.
 
+## Mayo 2025, Curso de control de versiones colaborativo con git y github.
+Impartido del 10 de mayo del 2025 al 14 de junio del 2025,
+- los sábados por la mañana.
+- 6 clases de hora y media cada una.
+- 25 becas para estudiantes con y sin discapacidad.
+
+[Git y GitHub mayo del 2025](https://josiasvasquez.github.io/itgrarte/git/052025)
+
 ## Julio 2024, Curso de control de versiones colaborativo con git y github.
 Impartido del 6 de julio del 2024 al 10 de agosto del 2024,
 - los sábados por la mañana.
