@@ -1,15 +1,129 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" src="../../media/HojaEstilos.css" />
-    <title>Pendiente, vuelve pronto</title>
+	<link rel="stylesheet" src="../../media/HojaEstilos.css" />
+<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>1a sesión curso control de versiones colaborativo con git y github</title>
 </head>
 <body>
-    <h1>Pendiente de completar</h1>
-    <p>Los recursos de esta clase se agregarán luego de recibida la clase.</p>
-    <a href="index.htm" role="button">Volver a la portada del curso</a>
+	<h1>Primera sesión curso de control de versiones con git y github:</h1>
+	<h2>Temas de la sesión:</h2>
+	<ol>
+		<li>Bienvenida y presentación entre participantes, instructor y fundación Itgrarte</li>
+		<li>
+			<details>
+				<summary>Descomprimiendo Git Portable</summary>
+				Git Portable es una versión de Git que no requiere instalación y puede ejecutarse directamente desde una unidad USB. Esto es útil para entornos en los que no se pueden instalar programas directamente en el sistema operativo. La descompresión de Git Portable facilita su uso sin afectar la configuración del sistema.
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Conociendo la estructura de carpetas de git portable</summary>
+				Comprender la estructura de carpetas de Git Portable es importante para localizar sus componentes principales, como los ejecutables, archivos de configuración y repositorios. Esto facilita la administración y el uso eficiente de Git en un entorno portátil.
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Introducción al control de versiones</summary>
+				El control de versiones es una metodología que permite seguir y gestionar los cambios realizados en el código o en cualquier archivo a lo largo del tiempo. Es esencial para el trabajo colaborativo, ya que permite a múltiples personas trabajar en el mismo proyecto sin sobrescribir el trabajo de los demás, facilitando la gestión de diversas versiones y ramas del proyecto.
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Introducción a la consola git CMD</summary>
+				La consola Git CMD es una interfaz de línea de comandos que permite a los usuarios interactuar con Git directamente a través de comandos. Es una herramienta poderosa para ejecutar operaciones de Git como clonar, commit, push, pull, y más, mediante comandos específicos, facilitando el control detallado del repositorio.
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Navegación entre repositorios</summary>
+				La navegación entre repositorios implica moverse entre diferentes proyectos de Git. Esto se hace comúnmente utilizando comandos como `cd` y `cd ..` para cambiar de directorio. Comprender esta habilidad es esencial para trabajar con múltiples proyectos y gestionar eficientemente los repositorios locales y remotos.
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Creación de repositorios</summary>
+				Un repositorio en Git es una estructura que almacena proyectos y su historial de cambios. Crear un repositorio es el primer paso para empezar a utilizar Git. Esto se puede hacer localmente o en plataformas como GitHub, y es vital para iniciar el control de versiones de cualquier proyecto.
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Configuración global y local de git</summary>
+				La configuración global y local de Git define cómo se identifica el usuario y cómo se comporta Git. La configuración global se aplica a todos los repositorios en un sistema, mientras que la configuración local es específica a un solo repositorio. Esto incluye detalles como el nombre de usuario, el correo electrónico y otros ajustes personalizados.
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Creación del primer commit</summary>
+				Un commit en Git es una instantánea de los cambios en el proyecto. Crear un commit es como tomar una foto del estado actual del proyecto, permitiendo a los desarrolladores rastrear y revertir cambios si es necesario. Es un paso crucial en el registro del progreso y la gestión del historial del proyecto.
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Etiquetas en Git</summary>
+				Las etiquetas en Git son utilizadas para marcar puntos específicos en la historia del proyecto como lanzamientos importantes (releases). A diferencia de los branches, las etiquetas no cambian y se utilizan principalmente para señalar versiones específicas del código. Existen dos tipos principales de etiquetas: anotadas y ligeras.
+			</details>
+		</li>
+	</ol>
+	<h2>Comandos utilizados en la sesión:</h2>
+	<dl>
+		<dt>Flechas izquierda y derecha</dt>
+		<dd>Revisar los comandos introducidos en la consola.</dd>
+		<dt>Flechas arriba y abajo:</dt>
+		<dd>Navegar en el historial de comandos ejecutados.</dd>
+		<dt>Avance y retroceso de página:</dt>
+		<dd>Navegar de forma rápida en el historial de comandos ejecutados.</dd>		
+		<dt>cd</dt>
+		<dd>Navegación entre carpetas</dd>
+		<dt>cd ..</dt>
+		<dd>Ir hacia atrás en el árbol de directorios, es decir al directorio padre.</dd>
+		<dt>ls</dt>
+		<dd>Listar los archivos y carpetas de un directorio.</dd>
+		<dt>dir</dt>
+		<dd>Listar los archivos y carpetas de un directorio.</dd>
+		<dt>mkdir</dt>
+		<dd>Crear una carpeta.</dd>
+		<dt>md</dt>
+		<dd>crear una carpeta.</dd>
+		<dt>git status</dt>
+		<dd>Conocer el estado del repositorio actual</dd>
+		<dt>git config --global user.name</dt>
+		<dd>Conocer el usuario global de git, o establecerlo poniendo el valor entre comillas.</dd>
+		<dt>git config --global user.email</dt>
+		<dd>Conocer el correo electrónico global de git, o establecerlo poniendo el valor entre comillas.</dd>
+		<dt>git add .</dt>
+		<dd>Agrega todos los archivos que han cambiado para registrarlos en el siguiente commit</dd>
+		<dt>git add --all</dt>
+		<dd>Agrega todos los archivos que han cambiado para registrarlos en el siguiente commit.</dd>
+		<dt>git add "nombreDeArchivo"</dt>
+		<dd>Agrega un archivo específico para registrarlo en el siguiente commit</dd>
+		<dt>git commit</dt>
+		<dd>Crear un commit sin descripción.</dd>
+		<dt>git commit -m "mensaje"</dt>
+		<dd>Crear un commit con un mensaje que lo describa.</dd>
+		<dt>git tag</dt>
+		<dd>Crear, listar, eliminar o consultar etiquetas en el repositorio.</dd>
+		<dt>git checkout</dt>
+		<dd>Cambiar entre ramas o restaurar archivos del árbol de trabajo.</dd>
+		<dt>git log</dt>
+		<dd>Mostrar el historial de commits del repositorio.</dd>
+		<dt>git log > log.txt</dt>
+		<dd>Guardar el historial de commits en un archivo de texto llamado log.txt.</dd>
+	</dl>
+	<h3>Notas:</h3>
+	<ol>
+		<li>para establecer el correo electrónico  global el comando sería:<br/>git config --global user.email "correo@ejemplo.com"</li>
+		<li>El correo debe ser el mismo que vamos a utilizar en la cuenta de github.</li>
+		<li>El nombre de usuario es con el que estarán firmados nuestros commits.</li>
+		<li>Para cambiar el usuario o correo para un repositorio específico, usamos el mismo comando sin la palabra --global</li>
+		<li>Cuando algún comando nos da error, debemos copiar el texto que explica el error, con esa información podemos pedir ayuda en el grupo o buscar la solución  en google.</li>
+		<li>Podemos copiar el texto del error con el cursor de revisión de NVDA, o más fácil con el complemento speech history para NVDA.</li>
+	</ol>
+	<h2>Grabación de la sesión:</h2>
+	<iframe src="https://drive.google.com/file/d/1B6bi7M3yL0ZheKHQBD0zj32JmWvHOnJP/preview" width="640" height="480" allow="autoplay"></iframe>
+	<p>Enlace a la grabación si lo prefieres <a href="https://drive.google.com/file/d/1B6bi7M3yL0ZheKHQBD0zj32JmWvHOnJP/view?usp=drive_link">Grabación de la primera sesión.</a></p>
+	<a href="index.htm" role="button">Volver a la portada del curso</a>
 	<footer>
 		<p><small>Josias Vásquez</small></p>
 		<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Atribución-CompartirIgual 4.0 Internacional</a>.</p>
