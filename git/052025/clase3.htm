@@ -1,18 +1,143 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link rel="stylesheet" src="../../media/HojaEstilos.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" src="../../media/HojaEstilos.css" />
-    <title>Pendiente, vuelve pronto</title>
+    <title>3a sesión curso control de versiones colaborativo con git y github</title>
 </head>
 <body>
-    <h1>Pendiente de completar</h1>
-    <p>Los recursos de esta clase se agregarán luego de recibida la clase.</p>
+    <h1>Tercera sesión curso de control de versiones con git y github:</h1>
+    <h2>Temas vistos en la sesión:</h2>
+    <ul>
+        <li>Repaso de la sesión anterior,</li>
+        <li>
+            <details>
+                <summary>Limpiar archivos sin seguimiento del repositorio</summary>
+                El comando `git clean -f` se utiliza para eliminar archivos no rastreados en el repositorio de trabajo.
+            </details>
+        </li>
+        <li>
+            <details>
+                <summary>Solucionar errores de combinación de ramas al hacer git merge.</summary>
+                Durante un merge, pueden surgir conflictos. Estos pueden resolverse manualmente editando los archivos en conflicto y luego utilizando `git add` para marcar los conflictos como resueltos.
+            </details>
+        </li>
+        <li>
+            <details>
+                <summary>Solucionar errores al hacer git rebase</summary>
+                Similar a un merge, los conflictos durante un rebase deben resolverse manualmente. Una vez resueltos, `git rebase --continue` continua el rebase.
+            </details>
+        </li>
+        <li>
+            <details>
+                <summary>Diferencia entre git rebase --continue y git rebase --skip</summary>
+                `git rebase --continue` continúa el rebase después de resolver conflictos, mientras que `git rebase --skip` omite el commit conflictivo y continua con el siguiente commit.
+            </details>
+        </li>
+        <li>
+            <details>
+                <summary>Que es el stash</summary>
+                El stash en Git es una operación que permite guardar temporalmente los cambios no confirmados en un área de almacenamiento llamada "stash".
+            </details>
+        </li>
+        <li>
+            <details>
+                <summary>Para que sirve el stash</summary>
+                El stash es útil para hacer una pausa en el trabajo actual y limpiar el área de trabajo sin perder los cambios no confirmados.
+            </details>
+        </li>
+        <li>
+            <details>
+                <summary>Cómo enviar los cambios al stash</summary>
+                Utiliza `git stash push` para enviar los cambios no confirmados al stash.
+            </details>
+        </li>
+        <li>
+            <details>
+                <summary>Cómo recuperar el stash con apply y pop</summary>
+                El comando `git stash apply` recupera los cambios del stash sin eliminar la entrada, mientras que `git stash pop` recupera los cambios y elimina la entrada del stash.
+            </details>
+        </li>
+        <li>
+            <details>
+                <summary>Cómo borrar elementos del stash</summary>
+                Utiliza `git stash drop` seguido del índice de la entrada, por ejemplo, `git stash drop stash@{0}`.
+            </details>
+        </li>
+        <li>
+            <details>
+                <summary>Cómo limpiar el stash</summary>
+                El comando `git stash clear` borra todas las entradas del stash.
+            </details>
+        </li>
+        <li>
+			<details>
+				<summary>Páginas y acciones de los repositorios en GitHub</summary>
+				<ul>
+					<li>Fork - Hacer una copia de un repositorio en la propia cuenta de GitHub.</li>
+					<li>Star - Marcar un repositorio como favorito.</li>
+					<li>Add this repository to a list - Añadir el repositorio a una lista personalizada.</li>
+					<li>Code - Exploración del código fuente del repositorio.</li>
+					<li>Issues - Gestión de incidencias y tareas pendientes.</li>
+					<li>Pull requests - Propuestas de cambios al código.</li>
+					<li>Discussions - Espacio para discusiones y comentarios del proyecto.</li>
+					<li>Actions - Automatización de flujos de trabajo.</li>
+					<li>Wiki - Documentación del proyecto organizada en páginas.</li>
+					<li>Security - Configuración y monitorización de la seguridad del repositorio.</li>
+					<li>Insights - Estadísticas y análisis del repositorio.</li>
+				</ul>
+			</details>
+		</li>
+    </ul>
+    <h2>Comandos vistos en la sesión:</h2>
+    <dl>
+        <dt>git clean -f</dt>
+        <dd>Elimina los archivos que no tienen seguimiento del repositorio.</dd>
+        <dt>git merge</dt>
+        <dd>Combina la rama indicada con la rama actual.</dd>
+        <dt>git add --all</dt>
+        <dd>Añade todos los cambios en los archivos al área de preparación (stage).</dd>
+        <dt>git commit -m "mensaje de solución"</dt>
+        <dd>Confirma los cambios preparados con un mensaje de confirmación.</dd>
+        <dt>git rebase</dt>
+        <dd>Cambia la base de la rama actual al último commit de la rama indicada.</dd>
+        <dt>git rebase --continue</dt>
+        <dd>Continúa el proceso de rebase después de resolver los conflictos.</dd>
+        <dt>git rebase --skip</dt>
+        <dd>Omite el commit actual en conflicto y continúa con el siguiente commit en el rebase.</dd>
+        <dt>git stash push</dt>
+        <dd>Agrega los cambios sin confirmar al stash; la entrada del stash tendrá como descripción el identificador del último commit.</dd>
+        <dt>git stash push -m "Mensaje"</dt>
+        <dd>Agrega los cambios sin confirmar al stash, con una descripción para ubicar mejor la entrada del stash.</dd>
+        <dt>git stash push -u -m "mensaje"</dt>
+        <dd>Agrega los cambios sin confirmar y archivos sin seguimiento al stash, con una descripción específica.</dd>
+        <dt>git stash push -k -m "mensaje"</dt>
+        <dd>Agrega los cambios sin confirmar al stash pero mantiene los archivos en el área de trabajo, con una descripción específica.</dd>
+        <dt>git stash list</dt>
+        <dd>Muestra una lista de las entradas del stash, indicando cada entrada con un índice, siendo @{0} el índice de la última entrada agregada al stash.</dd>
+        <dt>git stash apply</dt>
+        <dd>Aplica (recupera) la última entrada del stash que tiene el índice 0. Aunque recupera la entrada, no la borra del stash.</dd>
+        <dt>git stash apply stash@{1}</dt>
+        <dd>Aplica la entrada del stash con el índice 1. Aunque recupera la entrada, no la borra del stash.</dd>
+        <dt>git stash pop</dt>
+        <dd>Recupera la última entrada agregada al stash, la que tiene el índice 0; A diferencia del comando con apply, este comando si borra la entrada del stash.</dd>
+        <dt>git stash pop stash@{1}</dt>
+        <dd>Recupera la entrada del stash con índice 1, borrando la entrada del stash.</dd>
+        <dt>git stash drop</dt>
+        <dd>Elimina la última entrada del stash con índice 0.</dd>
+        <dt>git stash drop stash@{1}</dt>
+        <dd>Elimina la entrada del stash con índice 1. Se puede eliminar otra entrada del stash modificando el número entre llaves según corresponda.</dd>
+        <dt>git stash clear</dt>
+        <dd>Borra todas las entradas del stash.</dd>
+    </dl>
+    <h2>Grabación de la sesión:</h2>
+    <iframe src="https://drive.google.com/file/d/1wzOATIswl7Ue18vxepoMVht6J08eLN7l/preview" width="640" height="480" allow="autoplay"></iframe>
+    <p>Enlace a la grabación si lo prefieres <a href="https://drive.google.com/file/d/1wzOATIswl7Ue18vxepoMVht6J08eLN7l/view?usp=drive_link">Grabación tercera sesión</a></p>
     <a href="index.htm" role="button">Volver a la portada del curso</a>
-	<footer>
-		<p><small>Josias Vásquez</small></p>
-		<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Atribución-CompartirIgual 4.0 Internacional</a>.</p>
-	</footer>
+    <footer>
+        <p><small>Josias Vásquez</small></p>
+        <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Atribución-CompartirIgual 4.0 Internacional</a>.</p>
+    </footer>
 </body>
 </html>
