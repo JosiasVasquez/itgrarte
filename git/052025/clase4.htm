@@ -1,18 +1,156 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" src="../../media/HojaEstilos.css" />
-    <title>Pendiente, vuelve pronto</title>
+	<link rel="stylesheet" src="../../media/HojaEstilos.css" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>4a sesión curso control de versiones colaborativo con git y github</title>
 </head>
+
 <body>
-    <h1>Pendiente de completar</h1>
-    <p>Los recursos de esta clase se agregarán luego de recibida la clase.</p>
-    <a href="index.htm" role="button">Volver a la portada del curso</a>
+	<h1>Cuarta sesión curso de control de versiones con git y github:</h1>
+	
+	<h2>Temas vistos en la sesión:</h2>
+	<ul>
+		<li>Repaso</li>
+		<li>
+			<details>
+				<summary>Qué es GitHub</summary>
+				<p>GitHub es una plataforma de desarrollo colaborativo de software, donde se pueden alojar proyectos utilizando el sistema de control de versiones Git. Permite la colaboración entre múltiples desarrolladores y la gestión de proyectos de software.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Exploración por la interfaz de GitHub</summary>
+				<p>En esta sección se explora la interfaz de GitHub, entendiendo las distintas secciones y funcionalidades que ofrece la plataforma para la gestión y colaboración en proyectos.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Exploración y edición de perfil en GitHub</summary>
+				<p>Aquí se enseñan las maneras de explorar y editar el perfil del usuario en GitHub, incluyendo cómo agregar información personal, cambiar avatar, y configurar preferencias de cuenta.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Páginas y acciones de los repositorios en GitHub</summary>
+				<ul>
+					<li>Fork - Hacer una copia de un repositorio en la propia cuenta de GitHub.</li>
+					<li>Star - Marcar un repositorio como favorito.</li>
+					<li>Add this repository to a list - Añadir el repositorio a una lista personalizada.</li>
+					<li>Code - Exploración del código fuente del repositorio.</li>
+					<li>Issues - Gestión de incidencias y tareas pendientes.</li>
+					<li>Pull requests - Propuestas de cambios al código.</li>
+					<li>Discussions - Espacio para discusiones y comentarios del proyecto.</li>
+					<li>Actions - Automatización de flujos de trabajo.</li>
+					<li>Wiki - Documentación del proyecto organizada en páginas.</li>
+					<li>Security - Configuración y monitorización de la seguridad del repositorio.</li>
+					<li>Insights - Estadísticas y análisis del repositorio.</li>
+				</ul>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Contenido de la página Code de un repositorio</summary>
+				<p>La pestaña "Code" contiene todo el árbol de directorios del proyecto, archivos, commits recientes, y botones para clonar o descargar el repositorio.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>El archivo readme.md</summary>
+				<p>Un archivo `README.md` proporciona una descripción del proyecto. Es comúnmente utilizado para explicar qué hace el proyecto, cómo configurarlo y ejecutarlo, entre otras cosas.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Como clonar un repositorio por HTTPS y SSH</summary>
+				<p>Clonar un repositorio significa descargar una copia del repositorio remoto a tu máquina local. Se puede hacer usando URLs HTTPS o claves SSH según la configuración de seguridad y preferencias.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Cómo crear una clave SSH</summary>
+				<p>Las claves SSH se crean para habilitar una conexión segura entre las máquinas locales y los servidores. Es una medida de seguridad preferida sobre HTTPS para operaciones de escritura.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Cómo agregar la clave SSH a nuestra cuenta en GitHub</summary>
+				<p>Después de crear una clave SSH, es necesario añadirla a tu cuenta de GitHub para que pueda reconocerla y permitir operaciones de escritura desde tu máquina local.</p>
+			</details>
+		</li>
+		<li><details>
+			<summary>Archivo config en la carpeta .ssh</summary>
+						<p>El archivo config en la carpeta .ssh es un archivo de configuración que permite personalizar la conexión SSH para diferentes hosts o servidores. En este archivo, se pueden especificar parámetros como el nombre del host, el puerto, la clave de autenticación y el usuario.</p>
+			<h2>Sintaxis para GitHub por el puerto 443</h2>
+			<p>A continuación, se muestra la sintaxis para configurar la conexión SSH para GitHub utilizando el puerto 443:</p>
+			<pre>
+			Host github
+			HostName ssh.github.com
+			Port 443
+			IdentityFile ~/.ssh/id_ed25519
+			User git
+			</pre>
+			<p>En esta configuración:</p>
+			<ul>
+			<li><strong>Host</strong>: Especifica el nombre del host que se utilizará para la conexión SSH. En este caso, se utiliza "github", Al clonar, o buscar la conexión se utiliza para hacer referencia al hostname, por ejemplo en lugar de github.com o ssh.github.com se usa solo github porque así se estableció el host, esto se puede cambiar como se desee. Por ejemplo para comprobar la conexión se escribiría solo ssh github.</li>
+			<li><strong>HostName</strong>: Especifica el nombre real del host al que se conectará. En este caso, se utiliza "ssh.github.com".</li>
+			<li><strong>Port</strong>: Especifica el puerto que se utilizará para la conexión SSH. En este caso, se utiliza el puerto 443.</li>
+			<li><strong>IdentityFile</strong>: Especifica la ruta a la clave de autenticación que se utilizará para la conexión SSH. En este caso, se utiliza la clave "~/.ssh/id_ed25519".</li>
+			<li><strong>User</strong>: Especifica el usuario que se utilizará para la conexión SSH. En este caso, se utiliza el usuario "git".</li>
+			</ul>
+			<p>Al utilizar esta configuración, se puede establecer una conexión SSH con GitHub utilizando el comando "ssh github" en lugar de "ssh git@github.com". esto porque en la configuración ya se indicó el usuario, el puerto y el hostname y solo con el host se hacer referencia a él.</p>
+			</details></li>
+		<li>
+			<details>
+				<summary>Cómo agregar la clave GPG a nuestra cuenta en GitHub</summary>
+				<p>Las claves GPG se utilizan para firmar commits, lo que añade una capa de verificación de identidad. Se debe añadir la clave pública GPG a tu cuenta de GitHub.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary>Subir cambios del repositorio local al repositorio remoto</summary>
+				<p>Esta acción consiste en enviar los commits realizados en el repositorio local al repositorio remoto usando el comando `git push`.</p>
+			</details>
+		</li>
+			</ul>
+
+	<h2>Comandos vistos en la sesión:</h2>
+	<dl>
+		<dt>gpg --export -a "Nombre de Usuario" > public.key</dt>
+		<dd>Este comando exporta la clave pública GPG del usuario especificado a un archivo llamado `public.key`.</dd>
+
+		<dt>ssh-keygen -t ed25519 -C "correo@ejemplo.com"</dt>
+		<dd>Genera una nueva clave SSH utilizando el algoritmo Ed25519. El correo electrónico suele ser usado como comentario para identificar la clave.</dd>
+
+		<dt>ssh git@github.com</dt>
+		<dd>Este comando comprueba la conexión SSH a GitHub. Si la configuración es correcta, debe devolver un mensaje de bienvenida de GitHub.</dd>
+
+		<dt>ssh -p 443 git@ssh.github.com</dt>
+		<dd>Este comando comprueba la conexión SSH a GitHub en el puerto 443, alternativa cuando el comando anterior no funciona. Si la configuración es correcta, debe devolver un mensaje de bienvenida de GitHub.</dd>
+
+		<dt>git clone https://dominio.com/usuario/repositorio.git</dt>
+		<dd>Clona un repositorio de GitHub utilizando la URL HTTPS.</dd>
+
+		<dt>git clone git@github.com:usuario/repositorio</dt>
+		<dd>Clona un repositorio de GitHub utilizando la URL SSH.</dd>
+
+		<dt>git push</dt>
+		<dd>Envía los cambios realizados en el repositorio local al repositorio remoto.</dd>
+	</dl>
+	
+	<h2>Grabación de la clase:</h2>
+	<iframe src="https://drive.google.com/file/d/1YLuWQTUAOUxniBiZiLxtZ1nlLLcpVe8o/preview" width="640" height="480" allow="autoplay"></iframe>
+	<p>Este es el enlace a la grabación si lo prefieres <a href="https://drive.google.com/file/d/1YLuWQTUAOUxniBiZiLxtZ1nlLLcpVe8o/view?usp=sharing">Grabación cuarta sesión.</a></p>
+	<a href="index.htm" role="button">Volver a la portada del curso</a>
+
 	<footer>
 		<p><small>Josias Vásquez</small></p>
-		<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Atribución-CompartirIgual 4.0 Internacional</a>.</p>
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia Creative Commons"
+					style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Esta
+			obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative
+				Commons Atribución-CompartirIgual 4.0 Internacional</a>.</p>
 	</footer>
 </body>
+
 </html>
